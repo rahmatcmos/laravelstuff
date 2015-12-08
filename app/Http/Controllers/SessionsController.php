@@ -81,12 +81,12 @@ class SessionsController extends Controller
                 // Log login statistics
                 $user->updateLastLogin();
                 // Redirect where the user intended to go
-                return redirect()->intended('/dashboard/user');
+                return redirect()->intended('/dashboard');
 
                 if ($user->is('admin'))
-                    return redirect()->intended('/dashboard/admin');
+                    return redirect()->intended('/dashboard');
                 if ($user->is('user')) {
-                    return redirect()->intended('/dashboard/user');
+                    return redirect()->intended('/dashboard');
                 }
             } catch (UserNotVerified $e) {
                 // check to redirect with dashboard with or without cookie

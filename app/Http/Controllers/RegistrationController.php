@@ -78,7 +78,7 @@ class RegistrationController extends Controller
 
         Auth::login($user);
         // $user->assignRole($role);
-        return redirect()->to('dashboard/user');
+        return redirect()->to('dashboard');
     }
 
 

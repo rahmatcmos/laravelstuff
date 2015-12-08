@@ -38,7 +38,7 @@ class AuthTest extends TestCase
     /** @test */
     public function a_user_may_login()
     {
-        $this->login()->seePageIs('dashboard/user');
+        $this->login()->seePageIs('dashboard');
     }
 
 
