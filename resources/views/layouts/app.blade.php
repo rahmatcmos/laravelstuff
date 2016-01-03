@@ -7,7 +7,9 @@
     <title>{{ isset($page) ? $page : "" }}</title>
     <!-- Stylesheets -->
     <link rel="stylesheet" href="{{ elixir('output/final.css') }}"/>
+    <link href="{{ asset('css/webshop.css') }}" rel="stylesheet">
     <script src="{{elixir('output/final.js')}}"></script>
+    <script src="{{ asset('js/webshop.js') }}"></script>
     <link rel="shortcut icon" href={{ URL::asset("img/ico/favicon.ico") }}>
     <link rel="apple-touch-icon-precomposed" sizes="144x144"
           href={{ URL::asset("img/ico/apple-touch-icon-144-precomposed.png") }}>

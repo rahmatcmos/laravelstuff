@@ -21,6 +21,9 @@ Route:;get('error', function() {
     return view('test');
 });
 
+// Webshop route
+Route::get('/shop/nl/list', 'WebshopController@getWebshop');
+
 // Registration specific routes
 Route::get('register', 'RegistrationController@getRegister');
 Route::get('register/confirm', 'RegistrationController@confirmAccount');

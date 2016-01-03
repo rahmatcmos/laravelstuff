@@ -231,6 +231,11 @@ Author URL:
 /*************************
 *******Typography******
 **************************/
+.w-header {
+    padding-bottom: 200px;
+    padding-top: 200px;
+}
+
 body {
     padding-top: 60px;
     background: #fff;
@@ -1013,4 +1018,3 @@ html, body {
     box-shadow: none;
     -webkit-box-shadow: none;
 }
-
