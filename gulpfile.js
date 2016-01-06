@@ -51,6 +51,7 @@ elixir(function (mix) {
             paths.assets + "js/respond.min.js",
             paths.assets + "js/modernizr.min.js",
             paths.assets + "js/wow.min.js",
+            paths.assets + "js/webshop.js",
             "public/output/bundle.js", // Mix produced bundled output of browserify with all other scripts
             paths.tooltipster + "js/jquery.tooltipster.js",
         ], "public/output/final.js", "./") // Final js file
@@ -67,7 +68,7 @@ elixir(function (mix) {
             paths.assets + "css/prettyphoto.css",
             paths.assets + "css/main.css",
             paths.alert + "dist/sweetalert.css",
-            //paths.assets + "css/footer.css"
+            paths.assets + "css/webshop.css"
         ], "public/output/final.css", "./") // Final css file
         .version(["public/output/final.css", "public/output/final.js"]); // Version the final files here
 });

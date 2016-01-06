@@ -7,9 +7,7 @@
     <title>{{ isset($page) ? $page : "" }}</title>
     <!-- Stylesheets -->
     <link rel="stylesheet" href="{{ elixir('output/final.css') }}"/>
-    <link href="{{ asset('css/webshop.css') }}" rel="stylesheet">
     <script src="{{elixir('output/final.js')}}"></script>
-    <script src="{{ asset('js/webshop.js') }}"></script>
     <link rel="shortcut icon" href={{ URL::asset("img/ico/favicon.ico") }}>
     <link rel="apple-touch-icon-precomposed" sizes="144x144"
           href={{ URL::asset("img/ico/apple-touch-icon-144-precomposed.png") }}>
@@ -19,7 +17,7 @@
           href={{ URL::asset("img/ico/apple-touch-icon-72-precomposed.png") }}>
     <link rel="apple-touch-icon-precomposed" href={{ URL::asset("img/ico/apple-touch-icon-57-precomposed.png") }}>
 </head>
-<body id={{isset($page) ? $page : ""}} class={{isset($page) ? $page : ""}}">
+<body id="{{isset($page) ? $page : ""}}" class="{{isset($page) ? $page : ""}}">
 @yield('nav')
 @can('can_test')
     <h1>Hello world</h1>

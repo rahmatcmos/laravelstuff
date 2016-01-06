@@ -1,0 +1,39 @@
+/*************************
+*******Webshop******
+**************************/
+
+#header-area {
+    padding: 150px 0 70px 0;
+}
+
+#items-area {
+    padding: 150px 0 70px 0;
+    background: #f5f5f5;
+}
+
+.p.content {
+    text-align: justify;
+}
+
+.spacer {
+    padding-top: 50px;
+}
+
+h4 {
+    font-size: small;
+}
+
+.thumbnail {
+    padding-top: 20px;
+}
+
+@media (min-width: 680px) {
+    .w-modals {
+        width: 90%;
+        height: 90%;
+        top: 5%;
+        left: 5%;
+        right: 5%;
+        bottom: 5%;
+    }
+}
