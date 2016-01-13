@@ -31,11 +31,14 @@ class UploadController extends Controller
      */
     public function postUpload(UploadRequest $request)
     {
+        $old_path = getcwd();
+        chdir('../CityGisProcess/scripts');
+        shell_exec('./CityGisProcess');
         return $this->upload($request->file);
     }
 
 
-    /**
+    /*
      * Upload the file to the folderwatcher directory
      *
      * @param $file
@@ -48,9 +51,11 @@ class UploadController extends Controller
         if ($file !== null) {
             try {
                 FileValidator::FILE_TYPE($file, 'csv');
-                $destinationPath = 'uploads'; // upload path
+                $old_path = getcwd();
+                $destinationPath = '../CityGisProcess/bin/uploads'; // upload path
                 $extension = $file->getClientOriginalExtension(); // getting file extension
-                $fileName = rand(11111, 99999) . '.' . $extension; // renaming file
+                // $fileName = rand(11111, 99999) . '.' . $extension; // renaming file
+                $fileName="Connections.csv";
                 $file->move($destinationPath, $fileName); // Uploading file to given path
 
                 // sending back with message

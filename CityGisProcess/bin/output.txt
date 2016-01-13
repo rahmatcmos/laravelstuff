@@ -1,0 +1,2 @@
+Connections.csvConnection to database failedConnection to database - OK
+Delete connection records failed.

@@ -14,6 +14,8 @@ class FileValidator
             'application/vnd.ms-excel',
             'application/vnd.msexcel',
             'text/csv',
+            'txt',
+            'csv',
             'text/anytext',
             'text/comma-separated-values'
         ]
@@ -31,10 +33,11 @@ class FileValidator
         if (( $file->isValid() ) && ( $file->getClientSize() > 0 )) {
             if (in_array($file->getClientMimeType(), SELF::$TYPES[$type])) {
                 return true;
-            } elseif (( $file->getClientOriginalExtension() === $type ) && ( $file->getClientMimeType() === 'text/plain' )) {
+            } elseif (( $file->getClientOriginalExtension() === $type)) {
                 return true;
+            } else {
+                throw new MimeError(); // Throw a new mimeError
             }
-            throw new MimeError(); // Throw a new mimeError
         }
     }
 }
