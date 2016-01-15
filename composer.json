@@ -13,7 +13,8 @@
         "uxweb/sweet-alert": "^1.0",
         "phpdocumentor/phpdocumentor": "dev-master",
         "zofe/rapyd": "^2.1",
-        "fzaninotto/faker": "^1.5"
+        "fzaninotto/faker": "^1.5",
+        "barryvdh/laravel-dompdf": "^0.6.1"
     },
     "require-dev": {
         "mockery/mockery": "0.9.*",

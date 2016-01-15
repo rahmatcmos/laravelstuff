@@ -161,3 +161,4 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
         $this->roles()->save($role);
     }
 }
+

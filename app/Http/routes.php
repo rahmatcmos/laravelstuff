@@ -47,3 +47,5 @@ Route::post('admin', 'AdminController@postAdmin');
 Route::get('/upload', 'UploadController@getUpload');
 Route::post('/upload', 'UploadController@postUpload');
 
+// PDF Reports
+Route::get('/test/rapport', 'PDFController@generatePDF');

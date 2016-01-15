@@ -140,6 +140,7 @@ return [
         UxWeb\SweetAlert\SweetAlertServiceProvider::class,
         Zofe\Rapyd\RapydServiceProvider::class,
         Overtrue\LaravelLang\TranslationServiceProvider::class,
+        Barryvdh\DomPDF\ServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -200,6 +201,7 @@ return [
         'Form'      => \Illuminate\Html\FormFacade::class,
         'Html'      => \Illuminate\Html\HtmlFacade::class,
         'Alert'     => UxWeb\SweetAlert\SweetAlert::class,
+        'PDF'       => \Barryvdh\DomPDF\Facade::class,
     ],
 
 ];
