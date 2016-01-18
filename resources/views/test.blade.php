@@ -6,9 +6,14 @@
     <title></title>
     <!--insert bootstrap-->
 </head>
+@linechart('LineChart','LineChart')
 <body>
-<!--do something-->>
+
+
+<!--do something-->
 </body>
+<div id="LineChart"></div>
+<div id="ColumnChart"></div>
 </html>
 
 
