@@ -32,7 +32,7 @@ class Charts
 
         $dataTable = $this->dataTableFiller($UnitIds, $ChartTable);
 
-        $columnchart = \Lava::ColumnChart('columnChart')
+        $columnchart = \Lava::ColumnChart('ColumnChart')
             ->dataTable($dataTable)
             ->title('Column');
     }
@@ -58,7 +58,7 @@ class Charts
     public function xAxisDataFiller($dataTable, $xAxisData){
 
         $dataTable->addDateColumn($xAxisData)
-            ->setDateTimeFormat('d');
+            ->setDateTimeFormat('Y-m-d');
         return $dataTable;
 
     }
@@ -69,23 +69,31 @@ class Charts
         #IF there's  1 unit id thrown in the array it will do one.
         if(count($UnitIds) > 1) {
             $this->unitIdAdder($dataTable, $UnitIds);
+            $arrayDateHolder = array();
             foreach ($UnitIds as $UnitIdS){
-                $arrayDataHolder[$i] = array();
+                $arrayValueHolder[$i] = array();
                 $dataFromDatabase = $this->getMultiDatabaseData($ChartTable, $UnitIdS);
                 foreach($dataFromDatabase as $chartRow){
-                    array_push($arrayDataHolder[$i], $chartRow->values);
+                    array_push($arrayValueHolder[$i], $chartRow->values);
+                    array_push($arrayDateHolder, $chartRow->days);
                 }
                 $i++;
             }
-            $this->cutDatabaseData($dataTable, $i, $arrayDataHolder);
+
+            $arrayDateHolder = $this->dateCalculator($arrayDateHolder);
+            $this->cutDatabaseData($dataTable, $i, $arrayValueHolder, $arrayDateHolder);
+
         }
 
         else{
-            $dataTable->addNumberColumn(strval($UnitIds));
-            $dataFromDatabase = $this->getSingleDatabaseData($ChartTable);
-            foreach ($dataFromDatabase as $chartRow) {
-                $dataTable->addRow(array($chartRow->days, $chartRow->values));
+            foreach ($UnitIds as $UnitIds) {
+                $dataTable->addNumberColumn(strval($UnitIds));
+                $dataFromDatabase = $this->getSingleDatabaseData($ChartTable);
+                foreach ($dataFromDatabase as $chartRow) {
+                    $dataTable->addRow(array($chartRow->days, $chartRow->values));
+                }
             }
+
 
         }
         return $dataTable;
@@ -102,7 +110,7 @@ class Charts
     public function getSingleDatabaseData($ChartTable){
 
         $connection = \DB::table($ChartTable)
-            ->select(\DB::raw('SUBSTRING(date_time,9,2) AS days'),
+            ->select(\DB::raw('SUBSTRING(date_time,0,11) AS days'),
                 \DB::raw('SUM(CAST(value AS INT)) AS values'))
             ->groupBy('days')
             ->orderBy('days', 'asc')
@@ -115,7 +123,7 @@ class Charts
     public function getMultiDatabaseData($ChartTable, $UnitIds){
 
         $connection = \DB::table($ChartTable)
-            ->select(\DB::raw('SUBSTRING(date_time,9,2) AS days'),
+            ->select(\DB::raw('SUBSTRING(date_time,0,11) AS days'),
                 \DB::raw('SUM(CAST(value AS INT)) AS values'),
                 'unit_id')
             ->where('unit_id', '=', $UnitIds)
@@ -126,11 +134,20 @@ class Charts
         return $connection;
     }
 
-    public function cutDatabaseData($dataTable, $i, $arrayDataHolder){
+    public function dateCalculator($arrayDateHolder){
 
-        for($x = 0; $x<10; $x++){
+        $result = array_unique($arrayDateHolder);
+        sort($result);
+        return $result;
+    }
+
+    public function cutDatabaseData($dataTable, $i, $arrayDataHolder, $arrayDateHolder){
+
+        $x = 0;
+        foreach($arrayDateHolder as $arrayDateHolder){
             $a = 0;
-            $dataTableArray = array(strval($x+10));
+            $dataTableArray = array($arrayDateHolder);
+
 
             for($c = 0; $c<$i;$c++)
                 if(empty($arrayDataHolder[$a][$x])){
@@ -144,7 +161,7 @@ class Charts
                     if($c<$i)
                         $a++;
                 }
-
+            $x++;
             $dataTable->addRow($dataTableArray);
         }
         return $dataTable;

@@ -17,6 +17,7 @@ class ChartController extends Controller
         $this->testConnection();
         $chart = new Charts();
         $chart->createChart($barray, "events", "Line");
+        $chart->createChart($barray, "events", "Column");
         return view('test');
 
 

@@ -7,6 +7,7 @@
     <!--insert bootstrap-->
 </head>
 @linechart('LineChart','LineChart')
+@columnchart('ColumnChart','ColumnChart')
 <body>
 
 
