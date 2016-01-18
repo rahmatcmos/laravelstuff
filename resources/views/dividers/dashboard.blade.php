@@ -1,18 +1,19 @@
 @extends('layouts.dashboard')
 
+@section('title')
+    Dashboard
+@stop
+
 @section('nav')
-    @include('partials.home.nav')
+    @include('partials.dashboard.navbar')
+    @include('partials.dashboard.sidebar')
 @stop
 
 @section('content')
-    @include('sweet::alert')
-    @can('manage_site')
-        @include('partials.dashboard.admin')
-    @else
-        @include('partials.dashboard.user')
-    @endcan
+    @include('partials.dashboard.header')
+    @include('partials.dashboard.weather')
+    @include('partials.dashboard.charts')
 @stop
 
 @section('footer')
-    @include('partials.home.footer')
 @stop

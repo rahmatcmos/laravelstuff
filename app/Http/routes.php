@@ -35,10 +35,8 @@ Route::get('login', 'SessionsController@login');
 Route::post('login', 'SessionsController@postLogin');
 Route::get('logout', 'SessionsController@logout');
 
-//Route::get('dashboard', ['middleware' => 'auth', function() {
-//    $page = 'User dashboard';
-//    return view('dashboard.user', compact('page'));
-//}]);
+// Dashboard
+Route::get('dashboard', 'DashboardController@getDashboard');
 
 Route::get('admin', 'AdminController@getAdmin');
 Route::post('admin', 'AdminController@postAdmin');
