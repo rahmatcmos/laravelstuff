@@ -49,3 +49,6 @@ Route::post('/upload', 'UploadController@postUpload');
 
 // PDF Reports
 Route::get('/test/rapport', 'PDFController@generatePDF');
+
+//Generate Charts
+Route::get('/charts', 'ChartController@createChart');

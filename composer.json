@@ -14,7 +14,8 @@
         "phpdocumentor/phpdocumentor": "dev-master",
         "zofe/rapyd": "^2.1",
         "fzaninotto/faker": "^1.5",
-        "barryvdh/laravel-dompdf": "^0.6.1"
+        "barryvdh/laravel-dompdf": "^0.6.1",
+        "khill/lavacharts": "^2.5"
     },
     "require-dev": {
         "mockery/mockery": "0.9.*",

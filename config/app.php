@@ -141,6 +141,7 @@ return [
         Zofe\Rapyd\RapydServiceProvider::class,
         Overtrue\LaravelLang\TranslationServiceProvider::class,
         Barryvdh\DomPDF\ServiceProvider::class,
+        Khill\Lavacharts\Laravel\LavachartsServiceProvider::class,
 
         /*
          * Application Service Providers...
