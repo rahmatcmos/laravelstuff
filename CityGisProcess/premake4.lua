@@ -16,8 +16,7 @@ files {
 includedirs {
     "include",
     "include/process",
-    "include/filewatcher",
-    "/usr/include/postgresql/"
+    "include/filewatcher"
     -- "/usr/include",
 }
 objdir "intermediate"

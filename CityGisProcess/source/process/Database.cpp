@@ -32,7 +32,7 @@ PGconn *ConnectDB()
     PGconn *conn = NULL;
 
     // Make a connection to the database
-    conn = PQconnectdb("user=homestead password=secret dbname=project hostaddr=127.0.0.1 port=5432");
+    conn = PQconnectdb("user=homestead password=secret dbname=CityGis hostaddr=192.168.10.10 port=5432");
 
     // Check to see that the backend connection was successfully made 
     if (PQstatus(conn) != CONNECTION_OK)
@@ -562,27 +562,27 @@ void RemoveAllEventRec(PGconn *conn)
 /* ************************************************ Monitor QueryHandler ************************************************ */
 
 /* Append SQL statement and insert record into monitoring table */
-void InsertMonitorRec(PGconn *conn, std::string unit_id, std::string begin_time, std::string end_time , std::string device_id, std::string vehicle_id, std::string min, std::string max, std::string sum)
+void InsertMonitorRec(PGconn *conn, std::string unit_id, std::string begin_time, std::string end_time, std::string device_id, std::string vehicle_id, std::string min, std::string max, std::string sum)
 {
-    // Append the SQL statment
-    std::string sSQL;
-    sSQL.append("INSERT INTO monitoring VALUES ('");
-    sSQL.append(unit_id);
-    sSQL.append("', '");
-    sSQL.append(begin_time);
-    sSQL.append("', '");
-    sSQL.append(end_time);
-    sSQL.append("', '");
-    sSQL.append(device_id);
-    sSQL.append("', '");
-    sSQL.append(vehicle_id);
-    sSQL.append("', '");
-    sSQL.append(min);
-    sSQL.append("', '");
-    sSQL.append(max);
-    sSQL.append("', '");
-    sSQL.append(sum);
-    sSQL.append("')");
+	// Append the SQL statment
+	std::string sSQL;
+	sSQL.append("INSERT INTO monitorings (unit_id, begin_time, end_time, device_id, vehicle_id, min, max, sum) VALUES ('");
+	sSQL.append(unit_id);
+	sSQL.append("', '");
+	sSQL.append(begin_time);
+	sSQL.append("', '");
+	sSQL.append(end_time);
+	sSQL.append("', '");
+	sSQL.append(device_id);
+	sSQL.append("', '");
+	sSQL.append(vehicle_id);
+	sSQL.append("', '");
+	sSQL.append(min);
+	sSQL.append("', '");
+	sSQL.append(max);
+	sSQL.append("', '");
+	sSQL.append(sum);
+	sSQL.append("')");
 
     // Execute with sql statement
     PGresult *res = PQexec(conn, sSQL.c_str());
@@ -680,7 +680,7 @@ void FetchMonitorRec(PGconn *conn)
 void RemoveAllMonitorRec(PGconn *conn)
 {
     // Execute with sql statement
-    PGresult *res = PQexec(conn, "DELETE FROM monitoring");
+    PGresult *res = PQexec(conn, "DELETE FROM monitorings");
 
     if (PQresultStatus(res) != PGRES_COMMAND_OK)
     {
@@ -848,76 +848,76 @@ void CloseConnection() {
 }
 
 void savePositions(Positions p1) {
-    try {
-        InsertVehicleRec(conn, p1.UnitId, "Police");
-    }
-    catch (const std::exception&) {
-        std::cout << "Insert VehicleRec Failed" << std::endl;
-    }
-    try {
-        InsertPositionRec(conn, p1.DateTime, p1.UnitId, p1.UnitId, p1.Rdx, p1.Rdy, p1.Speed, p1.Course, p1.NumSatellites, p1.HDOP, p1.Quality);
-    }
-    catch (const std::exception&) {
-        std::cout << "Insert PositionRec Failed" << std::endl;
-    }
+	try {
+		InsertVehicleRec(conn, p1.UnitId, "Police");
+	}
+	catch (const std::exception&) {
+		//std::cout << "Insert VehicleRec Failed" << std::endl;
+	}
+	try {
+		InsertPositionRec(conn, p1.DateTime, p1.UnitId, p1.UnitId, p1.Rdx, p1.Rdy, p1.Speed, p1.Course, p1.NumSatellites, p1.HDOP, p1.Quality);
+	}
+	catch (const std::exception&) {
+		std::cout << "Insert PositionRec Failed" << std::endl;
+	}
 }
 
 void saveMonitoring(Monitoring m1) {
-    try {
-        InsertVehicleRec(conn, m1.UnitId, "Police");
-    }
-    catch (const std::exception&) {
-        std::cout << "Insert VehicleRec Failed" << std::endl;
-    }
-    try {
-        InsertDeviceRec(conn, m1.UnitId, m1.Type);
-    }
-    catch (const std::exception&) {
-        std::cout << "Insert DeviceRec Failed" << std::endl;
-    }
-    try {
-        InsertMonitorRec(conn, m1.UnitId, m1.BeginTime, m1.EndTime, m1.UnitId, m1.UnitId, "1", "1", "1");
-    }
-    catch (const std::exception&) {
-        std::cout << "Insert MonitorRec Failed" << std::endl;
-    }
+	try {
+		InsertVehicleRec(conn, m1.UnitId, "Police");
+	}
+	catch (const std::exception&) {
+		//std::cout << "Insert VehicleRec Failed" << std::endl;
+	}
+	try {
+		InsertDeviceRec(conn, m1.UnitId, m1.Type);
+	}
+	catch (const std::exception&) {
+		//std::cout << "Insert DeviceRec Failed" << std::endl;
+	}
+	try {
+		InsertMonitorRec(conn, m1.UnitId, m1.BeginTime, m1.EndTime, m1.UnitId, m1.UnitId, m1.Min, m1.Max, m1.Sum);
+	}
+	catch (const std::exception&) {
+		std::cout << "Insert MonitorRec Failed" << std::endl;
+	}
 }
 
 void saveEvents(Events e1) {
-    try
-    {
-        InsertVehicleRec(conn, e1.UnitId, "Police");
-    }
-    catch (const std::exception&) {
-        std::cout << "Insert VehicleRec Failed" << std::endl;
-    }
-    try
-    {
-        InsertEventRec(conn, e1.DateTime, e1.UnitId, e1.UnitId, e1.Port, e1.Value);
-    }
-    catch (const std::exception&) {
-        std::cout << "Insert EventsRec Failed";
-    }
+	try
+	{
+		InsertVehicleRec(conn, e1.UnitId, "Police");
+	}
+	catch (const std::exception&) {
+		//std::cout << "Insert VehicleRec Failed" << std::endl;
+	}
+	try
+	{
+		InsertEventRec(conn, e1.DateTime, e1.UnitId, e1.UnitId, e1.Port, e1.Value);
+	}
+	catch (const std::exception&) {
+		std::cout << "Insert EventsRec Failed";
+	}
 }
 
 void saveConnections(Connections c1) {
-    try
-    {
-        InsertVehicleRec(conn, c1.UnitId, "police");
+	try
+	{
+		InsertVehicleRec(conn, c1.UnitId, "police");
 
-    }
-    catch (const std::exception&)
-    {
-        std::cout << "Insert VehicleRec Failed"<< std::endl;
-    }
-    try
-    {
-        InsertConnectionRec(conn, c1.DateTime, c1.UnitId, c1.UnitId, c1.Port, c1.Value);
-    }
-    catch (const std::exception&)
-    {
-        std::cout << "Insert ConnectionRec Failed" + c1.UnitId << std::endl;
-    }
+	}
+	catch (const std::exception&)
+	{
+		//std::cout << "Insert VehicleRec Failed"<< std::endl;
+	}
+	try
+	{
+		InsertConnectionRec(conn, c1.DateTime, c1.UnitId, c1.UnitId, c1.Port, c1.Value);
+	}
+	catch (const std::exception&)
+	{
+		std::cout << "Insert ConnectionRec Failed" + c1.UnitId << std::endl;
+	}
 }
 
 void removeAll() {

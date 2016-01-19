@@ -25,14 +25,12 @@ void getDataCSV(std::string file)
         // std::cout << goodFile << std::endl;
         checkNameCSV(file);
         std::ifstream csv(file.c_str());
-	csv.ignore(10000, '\n');
+        csv.ignore(10000, '\n');
         std::string line;
         CreateConnection();
         // removeAll();
-
         while (std::getline(csv, line))
         {
-	    std::cout << line;
             setDataCSV(line);
         }
         CloseConnection();
@@ -112,87 +110,87 @@ void setDataCSV(std::string line)
 }
 
 void setPositions(std::string line, int follow) {
-    if (follow == 1) {
-        p1.DateTime = line;
-    }
-    if (follow == 2) {
-        p1.UnitId = line;
-    }
-    if (follow == 3) {
-        p1.Rdx = line;
-    }
-    if (follow == 4) {
-        p1.Rdy = line;
-    }
-    if (follow == 5) {
-        p1.Speed = line;
-    }
-    if (follow == 6) {
-        p1.Course = line;
-    }
-    if (follow == 7) {
-        p1.NumSatellites = line;
-    }
-    if (follow == 8) {
-        p1.HDOP = line;
-    }
-    if (follow == 9) {
-        p1.Quality = line;
-    }
+	if (follow == 1) {
+		p1.DateTime = line;
+	}
+	if (follow == 2) {
+		p1.UnitId = line;
+	}
+	if (follow == 3) {
+		p1.Rdx = line;
+	}
+	if (follow == 4) {
+		p1.Rdy = line;
+	}
+	if (follow == 5) {
+		p1.Speed = line;
+	}
+	if (follow == 6) {
+		p1.Course = line;
+	}
+	if (follow == 7) {
+		p1.NumSatellites = line;
+	}
+	if (follow == 8) {
+		p1.HDOP = line;
+	}
+	if (follow == 9) {
+		p1.Quality = line;
+	}
 }
 
 void setEvents(std::string line, int follow) {
-    if (follow == 1) {
-        e1.DateTime = line;
-    }
-    if (follow == 2) {
-        e1.UnitId = line;
-    }
-    if (follow == 3) {
-        e1.Port = line;
-    }
-    if (follow == 4) {
-        e1.Value = line;
-    }
+	if (follow == 1) {
+		e1.DateTime = line;
+	}
+	if (follow == 2) {
+		e1.UnitId = line;
+	}
+	if (follow == 3) {
+		e1.Port = line;
+	}
+	if (follow == 4) {
+		e1.Value = line;
+	}
 }
 
 void setConnections(std::string line, int follow) {
-    if (follow == 1) {
-        c1.DateTime = line;
-    }
-    if (follow == 2) {
-        c1.UnitId = line;
-    }
-    if (follow == 3) {
-        c1.Port = line;
-    }
-    if (follow == 4) {
-        c1.Value = line;
-    }
+	if (follow == 1) {
+		c1.DateTime = line;
+	}
+	if (follow == 2) {
+		c1.UnitId = line;
+	}
+	if (follow == 3) {
+		c1.Port = line;
+	}
+	if (follow == 4) {
+		c1.Value = line;
+	}
 }
 
 void setMonitoring(std::string line, int follow) {
-    if (follow == 1) {
-        m1.UnitId = line;
-    }
-    if (follow == 2) {
-        m1.BeginTime = line;
-    }
-    if (follow == 3) {
-        m1.EndTime = line;
-    }
-    if (follow == 4) {
-        m1.Type = line;
-    }
-    if (follow == 5) {
-        m1.Type = line;
-    }
-    if (follow == 6) {
-        m1.Type = line;
-    }
-    if (follow == 7) {
-        m1.Type = line;
-    }
+	if (follow == 1) {
+		m1.UnitId = line;
+	}
+	if (follow == 2) {
+		m1.BeginTime = line;
+	}
+	if (follow == 3) {
+		m1.EndTime = line;
+	}
+	if (follow == 4) {
+		m1.Type = line;
+	}
+	if (follow == 5) {
+		m1.Min = line;
+	}
+	if (follow == 6) {
+		m1.Max = line;
+	}
+	if (follow == 7) {
+		m1.Sum = line;
+	}
 }
 
 // vim:set et sw=4 ts=4: ft=cpp
