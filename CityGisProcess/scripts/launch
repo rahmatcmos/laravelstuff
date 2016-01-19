@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Check if CityGisProcess is running
+if pgrep "CityGisProcess_" > /dev/null
+then
+    return;
+else
+    ./CityGisProcess_d
+fi
+
