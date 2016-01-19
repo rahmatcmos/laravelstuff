@@ -14,8 +14,10 @@ class PDFController extends Controller
      */
     public function generatePDF()
     {
-        $data = User::all();
-        $pdf = PDF::loadView('dividers.report', compact('data'));
+        $page = "Pdf";
+        // $data = User::all();
+        $pdf = PDF::loadView('dividers.login', compact('page'));
+        // $pdf = PDF::loadView('dividers.report', compact('data'));
         return $pdf->stream();
     }
 }
