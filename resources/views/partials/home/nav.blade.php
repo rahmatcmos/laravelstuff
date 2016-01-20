@@ -11,12 +11,8 @@
             <!-- /responsive nav button -->
 
             <!-- logo -->
-            <div class="navbar-brand" style="margin-top: 15px;">
-                <a class="smooth-scroll" data-section="#main-slider"
-                   href="{{ (isset($page)) ? $page === 'Home' ? "#home" : "/" : false }} ">
-                    <span style="color: #ef662f"><strong>CityGis</strong></span>
-                    {{--                    <img src={{ URL::asset('img/logo.png') }} alt="">--}}
-                </a>
+            <div class="navbar-brand">
+                <a class="smooth-scroll site-name" data-section="#main-slider" href="{{ (isset($page)) ? $page === 'Home' ? "#home" : "/" : false }} ">Citygis</a>
             </div>
             <!-- /logo -->
         </div>

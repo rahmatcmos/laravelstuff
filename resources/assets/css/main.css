@@ -15,22 +15,6 @@
     width: 60%;
 }
 
-/*input:-webkit-autofill {*/
-/*-webkit-box-shadow: 0 0 0 50px white inset; /!* Change the color to your own background color *!/*/
-/*-webkit-text-fill-color: #333;*/
-/*}*/
-
-/*input:-webkit-autofill:focus {*/
-/*-webkit-box-shadow: 0 0 0 50px white inset;*/
-/*-webkit-text-fill-color: #333;*/
-/*}*/
-
-/*#registration-form input, textarea, select {*/
-/*outline: none;*/
-/*box-shadow: none !important;*/
-/*border: 1px solid #ccc !important;*/
-/*}*/
-
 #registration-area,
 #login-area,
 #confirmation-area,
@@ -886,6 +870,7 @@ ul.nostyle i {
 
 .img-pad {
     margin-top: 25px;
+    height: 325px;
 }
 
 /*************************
