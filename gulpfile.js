@@ -52,6 +52,7 @@ elixir(function (mix) {
             paths.assets + "js/modernizr.min.js",
             paths.assets + "js/wow.min.js",
             paths.assets + "js/webshop.js",
+            paths.assets + "js/bootstrap-filestyle.js",
             "public/output/bundle.js", // Mix produced bundled output of browserify with all other scripts
             paths.tooltipster + "js/jquery.tooltipster.js",
         ], "public/output/final.js", "./") // Final js file

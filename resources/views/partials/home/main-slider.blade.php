@@ -7,8 +7,7 @@
                         <div class="col-md-12">
                             <div class="carousel-content text-center">
                                 <h2>TOEGANKELIJKE DATA IS DE BESTE DATA. ALLEEN MET EEN OVERZICHTELIJKE <span>FRONT END</span>.</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et  dolore magna incididunt ut labore aliqua. </p>
-                                <a class="btn btn-primary btn-lg" href="#">LEES MEER</a>
+                                <!-- <a class="btn btn&#45;primary btn&#45;lg" href="#">LEES MEER</a> -->
                             </div>
                         </div>
                     </div>
@@ -22,8 +21,7 @@
                         <div  class="col-md-12">
                             <div class="carousel-content text-center">
                                 <h2>WIJ ZIJN CONTINUE BEZIG MET HET TEVREDEN STELLEN VAN ONZE <span>CLIËNTEN</span>.</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et  dolore magna incididunt ut labore aliqua. </p>
-                                <a class="btn btn-primary btn-lg" href="#">LEES MEER</a>
+                                <!-- <a class="btn btn&#45;primary btn&#45;lg" href="#">LEES MEER</a> -->
                             </div>
                         </div>
                     </div>
@@ -37,8 +35,7 @@
                         <div class="col-md-12">
                             <div class="carousel-content text-center">
                                 <h2>Beschikbare data is de beste data. Alleen met een duidelijke <span>FRONT END</span>.</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et  dolore magna incididunt ut labore aliqua. </p>
-                                <a class="btn btn-primary btn-lg" href="#">LEES MEER</a>
+                                <!-- <a class="btn btn&#45;primary btn&#45;lg" href="#">LEES MEER</a> -->
                             </div>
                         </div>
                     </div>
