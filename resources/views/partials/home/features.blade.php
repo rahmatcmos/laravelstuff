@@ -6,7 +6,7 @@
         </div>
         <div class="row">
             <div class="col-sm-6 wow fadeInLeft">
-                <img class="img-responsive" src={{ URL::asset('img/feature-2.png')}} alt="">
+                <img class="img-responsive" src={{ URL::asset('img/feature-1.png')}} alt="">
             </div>
             <div class="col-sm-6">
                 <div class="media service-box wow fadeInRight">

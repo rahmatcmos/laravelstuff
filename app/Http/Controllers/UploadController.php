@@ -22,7 +22,6 @@ class UploadController extends Controller
         $page = "Upload";
 
         $old_path = getcwd();
-        dd($old_path);
         chdir('../CityGisProcess/scripts/');
         shell_exec('./launch');
 

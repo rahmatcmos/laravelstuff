@@ -19,7 +19,7 @@
 
             </div>
             <div class="col-sm-6 wow fadeInLeft">
-                <img class="img-responsive" src={{ URL::asset('img/feature-2.png') }} alt="">
+                <img class="img-responsive" src="{{ URL::asset('img/about-1.png') }}" alt="">
             </div>
         </div>
     </div>
