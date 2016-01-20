@@ -5,7 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ isset($page) ? $page : "" }}</title>
+
+    <!-- Web font -->
+    <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet' type='text/css'>
+
     <!-- Stylesheets -->
+    <link rel="stylesheet" href="{{ asset('css/logo.css') }}"/>
     <link rel="stylesheet" href="{{ elixir('output/final.css') }}"/>
     <script src="{{elixir('output/final.js')}}"></script>
     <link rel="shortcut icon" href={{ URL::asset("img/ico/favicon.ico") }}>
