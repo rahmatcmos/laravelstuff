@@ -21,6 +21,11 @@ class UploadController extends Controller
     {
         $page = "Upload";
 
+        $old_path = getcwd();
+        dd($old_path);
+        chdir('../CityGisProcess/scripts/');
+        shell_exec('./launch');
+
         return view('dividers.upload', compact('page'));
     }
 
@@ -31,9 +36,6 @@ class UploadController extends Controller
      */
     public function postUpload(UploadRequest $request)
     {
-        $old_path = getcwd();
-        chdir('../CityGisProcess/scripts');
-        shell_exec('./CityGisProcess');
         return $this->upload($request->file);
     }
 

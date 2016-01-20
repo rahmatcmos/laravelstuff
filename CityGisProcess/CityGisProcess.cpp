@@ -19,8 +19,8 @@ class UpdateListener : public FW::FileWatchListener
         void handleFileAction(FW::WatchID watchid, const FW::String& dir, const FW::String& filename,
                 FW::Action action)
         {
-            std::string file = "uploads/" + filename;
-            getDataCSV(file);
+            std::string fname="uploads/" + filename;
+            getDataCSV(fname);
             std::cout << "DIR (" << dir + ") FILE (" + filename + ") has event " << action << std::endl;
         }
 };
@@ -30,8 +30,8 @@ int main()
     try
     {
         // Log material
-        // freopen( "output.txt", "w", stdout );
-        // freopen( "error.txt", "w", stderr );
+        freopen( "output.txt", "a", stdout );
+        freopen( "error.txt", "a", stderr );
         // create the file watcher object
         FW::FileWatcher fileWatcher;
 

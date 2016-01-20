@@ -22,7 +22,6 @@ void InsertMonitorRec(PGconn *conn, std::string unit_id, std::string begin_time,
 void InsertPositionRec(PGconn *conn, std::string date_time, std::string unit_id, std::string vehicle_id, std::string rdx, std::string rdy, std::string speed, std::string course, std::string um_satellites, std::string hdop, std::string quality);
 void InsertVehicleRec(PGconn *conn, std::string vehicle_id, std::string type);
 void InsertConnectionRec(PGconn *conn, std::string date_time, std::string unit_id, std::string vehicle_id, std::string port, std::string value);
+
+
 #endif
-
-// vim:set et sw=4 ts=4: ft=cpp
-

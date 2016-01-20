@@ -32,9 +32,44 @@ class FileValidator
     {
         if (( $file->isValid() ) && ( $file->getClientSize() > 0 )) {
             if (in_array($file->getClientMimeType(), SELF::$TYPES[$type])) {
+                switch ($file)
+                {
+                case 'Connections.csv':
+                    return true;
+                    break;
+                case 'Monitoring.csv':
+                    return true;
+                    break;
+                case 'Events.csv':
+                    return true;
+                    break;
+                case 'Positions.csv':
+                    return true;
+                    break;
+                default :
+                    return false;
+                    break;
+                }
                 return true;
             } elseif (( $file->getClientOriginalExtension() === $type)) {
-                return true;
+                switch ($file)
+                {
+                case 'Connections.csv':
+                    return true;
+                    break;
+                case 'Monitoring.csv':
+                    return true;
+                    break;
+                case 'Events.csv':
+                    return true;
+                    break;
+                case 'Positions.csv':
+                    return true;
+                    break;
+                default :
+                    return false;
+                    break;
+                }
             } else {
                 throw new MimeError(); // Throw a new mimeError
             }

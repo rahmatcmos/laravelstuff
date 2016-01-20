@@ -24,7 +24,7 @@ ifeq ($(config),debug)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/CityGisProcess_d
   DEFINES   += -DDEBUG
-  INCLUDES  += -I../../include -I../../include/process -I../../include/filewatcher
+  INCLUDES  += -I../../include -I../../include/process -I../../include/filewatcher -I/usr/include/postgresql -I/usr/include
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -g
   CXXFLAGS  += $(CFLAGS) 
@@ -46,7 +46,7 @@ ifeq ($(config),release)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/CityGisProcess
   DEFINES   += -DNDEBUG
-  INCLUDES  += -I../../include -I../../include/process -I../../include/filewatcher
+  INCLUDES  += -I../../include -I../../include/process -I../../include/filewatcher -I/usr/include/postgresql -I/usr/include
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -O2
   CXXFLAGS  += $(CFLAGS) 
@@ -54,7 +54,7 @@ ifeq ($(config),release)
   LIBS      += 
   RESFLAGS  += $(DEFINES) $(INCLUDES) 
   LDDEPS    += 
-  LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) -lpq $(LDFLAGS) $(RESOURCES) $(ARCH) $(LIBS)
+  LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(LDFLAGS) $(RESOURCES) $(ARCH) $(LIBS)
   define PREBUILDCMDS
   endef
   define PRELINKCMDS

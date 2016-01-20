@@ -32,15 +32,15 @@ PGconn *ConnectDB()
     PGconn *conn = NULL;
 
     // Make a connection to the database
-    conn = PQconnectdb("user=homestead password=secret dbname=CityGis hostaddr=192.168.10.10 port=5432");
+    conn = PQconnectdb("user=homestead password=secret dbname=project hostaddr=127.0.0.1 port=5432");
 
     // Check to see that the backend connection was successfully made 
     if (PQstatus(conn) != CONNECTION_OK)
     {
-        cerr << "Connection to database failed";
+        cerr << "Connection to database failed\n";
         CloseConn(conn);
     } else {
-        cout << "Connection to database - OK";
+        cout << "Connection to database - OK\n";
     }
 
     return conn;
@@ -564,25 +564,25 @@ void RemoveAllEventRec(PGconn *conn)
 /* Append SQL statement and insert record into monitoring table */
 void InsertMonitorRec(PGconn *conn, std::string unit_id, std::string begin_time, std::string end_time, std::string device_id, std::string vehicle_id, std::string min, std::string max, std::string sum)
 {
-	// Append the SQL statment
-	std::string sSQL;
-	sSQL.append("INSERT INTO monitorings (unit_id, begin_time, end_time, device_id, vehicle_id, min, max, sum) VALUES ('");
-	sSQL.append(unit_id);
-	sSQL.append("', '");
-	sSQL.append(begin_time);
-	sSQL.append("', '");
-	sSQL.append(end_time);
-	sSQL.append("', '");
-	sSQL.append(device_id);
-	sSQL.append("', '");
-	sSQL.append(vehicle_id);
-	sSQL.append("', '");
-	sSQL.append(min);
-	sSQL.append("', '");
-	sSQL.append(max);
-	sSQL.append("', '");
-	sSQL.append(sum);
-	sSQL.append("')");
+    // Append the SQL statment
+    std::string sSQL;
+    sSQL.append("INSERT INTO monitorings (unit_id, begin_time, end_time, device_id, vehicle_id, min, max, sum) VALUES ('");
+    sSQL.append(unit_id);
+    sSQL.append("', '");
+    sSQL.append(begin_time);
+    sSQL.append("', '");
+    sSQL.append(end_time);
+    sSQL.append("', '");
+    sSQL.append(device_id);
+    sSQL.append("', '");
+    sSQL.append(vehicle_id);
+    sSQL.append("', '");
+    sSQL.append(min);
+    sSQL.append("', '");
+    sSQL.append(max);
+    sSQL.append("', '");
+    sSQL.append(sum);
+    sSQL.append("')");
 
     // Execute with sql statement
     PGresult *res = PQexec(conn, sSQL.c_str());
@@ -630,8 +630,8 @@ void FetchMonitorRec(PGconn *conn)
         CloseConn(conn);
     } else {
         cout << "DECLARE CURSOR failed\n";
-    // Clear result
-    PQclear(res);
+        // Clear result
+        PQclear(res);
     }
 
     res = PQexec(conn, "FETCH ALL in emprec");
@@ -644,35 +644,35 @@ void FetchMonitorRec(PGconn *conn)
     } else {
         cerr << "FETCH ALL - OK\n";
 
-    // Get the field name
-    nFields = PQnfields(res);
+        // Get the field name
+        nFields = PQnfields(res);
 
-    // Prepare the header with monitor table field name
-    printf("\nFetch monitor records:");
-    printf("\n*************************************************************************************\n");
-    for (int i = 0; i < nFields; i++)
-        printf("%-20s", PQfname(res, i));
-    printf("\n*************************************************************************************\n");
+        // Prepare the header with monitor table field name
+        printf("\nFetch monitor records:");
+        printf("\n*************************************************************************************\n");
+        for (int i = 0; i < nFields; i++)
+            printf("%-20s", PQfname(res, i));
+        printf("\n*************************************************************************************\n");
 
-    // Next, print out the monitor record for each row
-    for (int i = 0; i < PQntuples(res); i++)
-    {
-        for (int j = 0; j < nFields; j++)
-            printf("%-20s", PQgetvalue(res, i, j));
-        printf("\n");
-    }
+        // Next, print out the monitor record for each row
+        for (int i = 0; i < PQntuples(res); i++)
+        {
+            for (int j = 0; j < nFields; j++)
+                printf("%-20s", PQgetvalue(res, i, j));
+            printf("\n");
+        }
 
-    PQclear(res);
+        PQclear(res);
 
-    // Close the emprec
-    res = PQexec(conn, "CLOSE emprec");
-    PQclear(res);
+        // Close the emprec
+        res = PQexec(conn, "CLOSE emprec");
+        PQclear(res);
 
-    // End the transaction
-    res = PQexec(conn, "END");
+        // End the transaction
+        res = PQexec(conn, "END");
 
-    // Clear result
-    PQclear(res);
+        // Clear result
+        PQclear(res);
     }
 }
 
@@ -680,7 +680,7 @@ void FetchMonitorRec(PGconn *conn)
 void RemoveAllMonitorRec(PGconn *conn)
 {
     // Execute with sql statement
-    PGresult *res = PQexec(conn, "DELETE FROM monitorings");
+    PGresult *res = PQexec(conn, "DELETE FROM monitoring");
 
     if (PQresultStatus(res) != PGRES_COMMAND_OK)
     {
@@ -688,9 +688,9 @@ void RemoveAllMonitorRec(PGconn *conn)
         PQclear(res);
         CloseConn(conn);
     } else {
-    cout << "Delete monitor records - OK\n";
-    // Clear result
-    PQclear(res);
+        cout << "Delete monitor records - OK\n";
+        // Clear result
+        PQclear(res);
     }
 
 }
@@ -736,9 +736,9 @@ void InsertPositionRec(PGconn *conn, std::string date_time, std::string unit_id,
         PQclear(res);
         CloseConn(conn);
     } else {
-    cout << "Insert position record - OK\n";
-    // Clear result
-    PQclear(res);
+        cout << "Insert position record - OK\n";
+        // Clear result
+        PQclear(res);
     }
 }
 
@@ -758,8 +758,8 @@ void FetchPositionRec(PGconn *conn)
         CloseConn(conn);
     } else {
         cout << "BEGIN command - OK\n";
-    // Clear result
-    PQclear(res);
+        // Clear result
+        PQclear(res);
 
     }
 
@@ -772,8 +772,8 @@ void FetchPositionRec(PGconn *conn)
         CloseConn(conn);
     } else {
         cout << "DECLARE CURSOR - OK\n";
-    // Clear result
-    PQclear(res);
+        // Clear result
+        PQclear(res);
     }
 
 
@@ -787,35 +787,35 @@ void FetchPositionRec(PGconn *conn)
     } else {
         cout << "FETCH ALL - OK\n";
 
-    // Get the field name
-    nFields = PQnfields(res);
+        // Get the field name
+        nFields = PQnfields(res);
 
-    // Prepare the header with positions table field name
-    printf("\nFetch position records:");
-    printf("\n*************************************************************************************\n");
-    for (int i = 0; i < nFields; i++)
-        printf("%-20s", PQfname(res, i));
-    printf("\n*************************************************************************************\n");
+        // Prepare the header with positions table field name
+        printf("\nFetch position records:");
+        printf("\n*************************************************************************************\n");
+        for (int i = 0; i < nFields; i++)
+            printf("%-20s", PQfname(res, i));
+        printf("\n*************************************************************************************\n");
 
-    // Next, print out the position record for each row
-    for (int i = 0; i < PQntuples(res); i++)
-    {
-        for (int j = 0; j < nFields; j++)
-            printf("%-20s", PQgetvalue(res, i, j));
-        printf("\n");
-    }
+        // Next, print out the position record for each row
+        for (int i = 0; i < PQntuples(res); i++)
+        {
+            for (int j = 0; j < nFields; j++)
+                printf("%-20s", PQgetvalue(res, i, j));
+            printf("\n");
+        }
 
-    PQclear(res);
+        PQclear(res);
 
-    // Close the emprec
-    res = PQexec(conn, "CLOSE emprec");
-    PQclear(res);
+        // Close the emprec
+        res = PQexec(conn, "CLOSE emprec");
+        PQclear(res);
 
-    // End the transaction
-    res = PQexec(conn, "END");
+        // End the transaction
+        res = PQexec(conn, "END");
 
-    // Clear result
-    PQclear(res);
+        // Clear result
+        PQclear(res);
     }
 }
 
@@ -831,9 +831,9 @@ void RemoveAllPositionRec(PGconn *conn)
         PQclear(res);
         CloseConn(conn);
     } else {
-    cout << "Delete position records - OK\n";
-    // Clear result
-    PQclear(res);
+        cout << "Delete position records - OK\n";
+        // Clear result
+        PQclear(res);
     }
 }
 
@@ -848,76 +848,76 @@ void CloseConnection() {
 }
 
 void savePositions(Positions p1) {
-	try {
-		InsertVehicleRec(conn, p1.UnitId, "Police");
-	}
-	catch (const std::exception&) {
-		//std::cout << "Insert VehicleRec Failed" << std::endl;
-	}
-	try {
-		InsertPositionRec(conn, p1.DateTime, p1.UnitId, p1.UnitId, p1.Rdx, p1.Rdy, p1.Speed, p1.Course, p1.NumSatellites, p1.HDOP, p1.Quality);
-	}
-	catch (const std::exception&) {
-		std::cout << "Insert PositionRec Failed" << std::endl;
-	}
+    try {
+        InsertVehicleRec(conn, p1.UnitId, "Police");
+    }
+    catch (const std::exception&) {
+        std::cerr << "\nInsert VehicleRec Failed " << std::endl;
+    }
+    try {
+        InsertPositionRec(conn, p1.DateTime, p1.UnitId, p1.UnitId, p1.Rdx, p1.Rdy, p1.Speed, p1.Course, p1.NumSatellites, p1.HDOP, p1.Quality);
+    }
+    catch (const std::exception&) {
+        std::cerr << "\nInsert PositionRec Failed " << std::endl;
+    }
 }
 
 void saveMonitoring(Monitoring m1) {
-	try {
-		InsertVehicleRec(conn, m1.UnitId, "Police");
-	}
-	catch (const std::exception&) {
-		//std::cout << "Insert VehicleRec Failed" << std::endl;
-	}
-	try {
-		InsertDeviceRec(conn, m1.UnitId, m1.Type);
-	}
-	catch (const std::exception&) {
-		//std::cout << "Insert DeviceRec Failed" << std::endl;
-	}
-	try {
-		InsertMonitorRec(conn, m1.UnitId, m1.BeginTime, m1.EndTime, m1.UnitId, m1.UnitId, m1.Min, m1.Max, m1.Sum);
-	}
-	catch (const std::exception&) {
-		std::cout << "Insert MonitorRec Failed" << std::endl;
-	}
+    try {
+        InsertVehicleRec(conn, m1.UnitId, "Police");
+    }
+    catch (const std::exception&) {
+        std::cerr << "\nInsert VehicleRec Failed " << std::endl;
+    }
+    try {
+        InsertDeviceRec(conn, m1.UnitId, m1.Type);
+    }
+    catch (const std::exception&) {
+        std::cerr << "\nInsert DeviceRec Failed " << std::endl;
+    }
+    try {
+        InsertMonitorRec(conn, m1.UnitId, m1.BeginTime, m1.EndTime, m1.UnitId, m1.UnitId, m1.Min, m1.Max, m1.Sum);
+    }
+    catch (const std::exception&) {
+        std::cerr << "\nInsert MonitorRec Failed " << std::endl;
+    }
 }
 
 void saveEvents(Events e1) {
-	try
-	{
-		InsertVehicleRec(conn, e1.UnitId, "Police");
-	}
-	catch (const std::exception&) {
-		//std::cout << "Insert VehicleRec Failed" << std::endl;
-	}
-	try
-	{
-		InsertEventRec(conn, e1.DateTime, e1.UnitId, e1.UnitId, e1.Port, e1.Value);
-	}
-	catch (const std::exception&) {
-		std::cout << "Insert EventsRec Failed";
-	}
+    try
+    {
+        InsertVehicleRec(conn, e1.UnitId, "Police");
+    }
+    catch (const std::exception&) {
+        std::cerr << "\nInsert VehicleRec Failed " << std::endl;
+    }
+    try
+    {
+        InsertEventRec(conn, e1.DateTime, e1.UnitId, e1.UnitId, e1.Port, e1.Value);
+    }
+    catch (const std::exception&) {
+        std::cerr << "\nInsert EventsRec Failed ";
+    }
 }
 
 void saveConnections(Connections c1) {
-	try
-	{
-		InsertVehicleRec(conn, c1.UnitId, "police");
+    try
+    {
+        InsertVehicleRec(conn, c1.UnitId, "police");
 
-	}
-	catch (const std::exception&)
-	{
-		//std::cout << "Insert VehicleRec Failed"<< std::endl;
-	}
-	try
-	{
-		InsertConnectionRec(conn, c1.DateTime, c1.UnitId, c1.UnitId, c1.Port, c1.Value);
-	}
-	catch (const std::exception&)
-	{
-		std::cout << "Insert ConnectionRec Failed" + c1.UnitId << std::endl;
-	}
+    }
+    catch (const std::exception&)
+    {
+        std::cerr << "\nInsert VehicleRec Failed "<< std::endl;
+    }
+    try
+    {
+        InsertConnectionRec(conn, c1.DateTime, c1.UnitId, c1.UnitId, c1.Port, c1.Value);
+    }
+    catch (const std::exception&)
+    {
+        std::cerr << "\nInsert ConnectionRec Failed\nUnit_id: " + c1.UnitId << std::endl;
+    }
 }
 
 void removeAll() {
