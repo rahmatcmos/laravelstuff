@@ -14,13 +14,6 @@
 // Home route controller
 Route::get('/', 'HomeController@getHome');
 
-Route::get('dashboard', 'DashboardController@userDashboard');
-Route:: get('dashboard/mail', 'DashboardController@inbox');
-
-Route:;get('error', function() {
-    return view('test');
-});
-
 // Webshop route
 Route::get('/shop/nl/list', 'WebshopController@getWebshop');
 
@@ -38,6 +31,7 @@ Route::get('logout', 'SessionsController@logout');
 // Dashboard
 Route::get('dashboard', 'DashboardController@getDashboard');
 
+// Admin
 Route::get('admin', 'AdminController@getAdmin');
 Route::post('admin', 'AdminController@postAdmin');
 
@@ -50,3 +44,8 @@ Route::get('/test/rapport', 'PDFController@generatePDF');
 
 //Generate Charts
 Route::get('/charts', 'ChartController@createChart');
+
+// Test
+Route::get('test',function(){
+    return view('test');
+});

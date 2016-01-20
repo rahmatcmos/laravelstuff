@@ -3,6 +3,8 @@
 namespace App\Validators;
 
 use App\Exceptions\MimeError;
+use App\Exceptions\EmptyFileError;
+use App\Exceptions\FileNotSupportedError;
 
 class FileValidator
 {
@@ -32,47 +34,36 @@ class FileValidator
     {
         if (( $file->isValid() ) && ( $file->getClientSize() > 0 )) {
             if (in_array($file->getClientMimeType(), SELF::$TYPES[$type])) {
-                switch ($file)
-                {
-                case 'Connections.csv':
-                    return true;
-                    break;
-                case 'Monitoring.csv':
-                    return true;
-                    break;
-                case 'Events.csv':
-                    return true;
-                    break;
-                case 'Positions.csv':
-                    return true;
-                    break;
-                default :
-                    return false;
-                    break;
-                }
-                return true;
+                FileValidator::verifyFileName($file->getClientOriginalName());
             } elseif (( $file->getClientOriginalExtension() === $type)) {
-                switch ($file)
-                {
-                case 'Connections.csv':
-                    return true;
-                    break;
-                case 'Monitoring.csv':
-                    return true;
-                    break;
-                case 'Events.csv':
-                    return true;
-                    break;
-                case 'Positions.csv':
-                    return true;
-                    break;
-                default :
-                    return false;
-                    break;
-                }
+                FileValidator::verifyFileName($file->getClientOriginalName());
             } else {
                 throw new MimeError(); // Throw a new mimeError
             }
+        } else {
+            throw new EmptyFileError(); // Throw a new EmptyFileError
+        }
+    }
+
+    public static function verifyFileName($name)
+    {
+        switch ($name)
+        {
+        case 'Connections.csv':
+            return true;
+            break;
+        case 'Monitoring.csv':
+            return true;
+            break;
+        case 'Events.csv':
+            return true;
+            break;
+        case 'Positions.csv':
+            return true;
+            break;
+        default :
+            throw new FileNotSupportedError();
+            break;
         }
     }
 }

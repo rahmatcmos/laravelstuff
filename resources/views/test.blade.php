@@ -6,15 +6,32 @@
     <title></title>
     <!--insert bootstrap-->
 </head>
-@linechart('LineChart','LineChart')
-@columnchart('ColumnChart','ColumnChart')
 <body>
 
+            <div class="radio">
+                <label>
+                    <input type="radio" name="name" value="" checked>
+                    Connections.csv
+                </label>
+                </br>
+                <label>
+                    <input type="radio" name="name" value="" checked>
+                    Monitoring.csv
+                </label>
+                </br>
+                <label>
+                    <input type="radio" name="name" value="" checked>
+                    Events.csv
+                </label>
+                </br>
+                <label>
+                    <input type="radio" name="name" value="" checked>
+                    Positions.csv
+                </label>
+            </div>
 
 <!--do something-->
 </body>
-<div id="LineChart"></div>
-<div id="ColumnChart"></div>
 </html>
 
 
