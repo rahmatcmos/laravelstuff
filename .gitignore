@@ -7,3 +7,4 @@ tags
 .idea
 INFPRJ0156.iml
 CityGisProcess/bin/*.txt
+CityGisProcess/bin/uploads/*
