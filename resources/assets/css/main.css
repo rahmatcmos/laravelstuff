@@ -2,6 +2,16 @@
  *  Adjust the input fields to the desired styling for the areas
  **/
 /***************************************************** START STYLES FORMS *****************************************************/
+.site-name {
+    margin-top: 10px;
+    font-family: 'Aclonica', sans-serif;
+    font-size: 40px;
+}
+
+.site-name a {
+    color: #B52A2F;
+}
+
 
 .registration-form-grow-field-max {
     width: 100%;
