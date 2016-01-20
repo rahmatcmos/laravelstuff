@@ -2,20 +2,24 @@
     <div class="container">
         <div class="section-header">
             <h2 class="section-title text-center wow fadeInDown">Geweldige Features</h2>
-            <p class="text-center wow fadeInDown">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+            <p class="text-center wow fadeInDown">In de huidige build hebben wij ons vooral gericht op de functies
+                betreft dataverwerking, zie lijst nieuwe features hieronder.</p>
         </div>
-        <div class="row">
-            <div class="col-sm-6 wow fadeInLeft">
-                <img class="img-responsive" src={{ URL::asset('img/feature-1.png')}} alt="">
-            </div>
-            <div class="col-sm-6">
+
+        <div class="col-sm-6 wow fadeInLeft">
+            <img class="img-responsive img-pad" src={{ URL::asset('img/feature-1.png')}} alt="">
+        </div>
+
+        <div class="col-sm-6">
+            <div class="row">
                 <div class="media service-box wow fadeInRight">
                     <div class="pull-left">
                         <i class="fa fa-line-chart"></i>
                     </div>
                     <div class="media-body">
                         <h4 class="media-heading">Meta-data sale</h4>
-                        <p>CityGis biedt de mogelijkheid aan derde om meta-data aan te schaffen voor commerciële doeleinden</p>
+                        <p>CityGis biedt de mogelijkheid aan derde om meta-data aan te schaffen voor commerciële
+                            doeleinden</p>
                     </div>
                 </div>
 
@@ -35,7 +39,8 @@
                     </div>
                     <div class="media-body">
                         <h4 class="media-heading">Report generator</h4>
-                        <p>CityGis biedt een web-interface waar rapportages kunnen worden gegenereerd voor diverse doeleinden</p>
+                        <p>CityGis biedt een web-interface waar rapportages kunnen worden gegenereerd voor diverse
+                            doeleinden</p>
                     </div>
                 </div>
 

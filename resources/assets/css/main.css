@@ -608,9 +608,11 @@ ul.nostyle i {
     background: #f5f5f5;
 }
 
-#features .media.service-box:first-child {
-    margin-top: 80px;
-}
+/*
+    Verneukt top margin vergeleken met het plaatje ernaast
+#features .media.service-box:first-child {*/
+    /*margin-top: 80px;*/
+/*}*/
 
 #upload {
     padding: 100px 0 75px;
@@ -880,6 +882,10 @@ ul.nostyle i {
 
 #testimonial #carousel-testimonial .btns a {
     margin: 0 2px;
+}
+
+.img-pad {
+    margin-top: 25px;
 }
 
 /*************************

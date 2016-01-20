@@ -3,7 +3,7 @@
         <div class="row">
             <div class="section-header">
                 <h2 class="section-title text-center wow fadeInDown animated" style="visibility: visible;">Login met uw
-                    Lorem Ipsum-account</h2>
+                    CityGis-account</h2>
                 <p class="text-center wo
                     w fadeindown animated" style="visibility: visible;">Login met uw CityGis-account</p>
             </div>

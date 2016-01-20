@@ -5,4 +5,5 @@ Homestead.json
 .env
 tags
 .idea
+.iml
 CityGisProcess/bin/*.txt

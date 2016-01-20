@@ -1,9 +1,11 @@
-<section id="upload" >
+<section id="upload">
     <div class="container">
 
         <div class="section-header">
             <h2 class="section-title text-center wow fadeInDown">Onze Upload Service</h2>
-            <p class="text-center wow fadeInDown">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+            <p class="text-center wow fadeInDown">Via de onderstaande knop kunt u rauwe data in de vorm van CSV
+                files uploaden. Ons systeem zal de data vervolgens<br> op juiste wijze verwerken en omzetten in waardevolle
+                informatie.</p>
         </div>
 
         <div class="row">
@@ -15,7 +17,7 @@
                                 <i class="fa fa-upload"></i>
                             </div>
                             <h3 class="features-title font-alt">CityGis data upload</h3>
-                            Optimised for speed
+                            Optimized for speed
                         </a>
                     </div>
                 </div>
