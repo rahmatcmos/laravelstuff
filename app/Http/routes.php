@@ -50,3 +50,9 @@ Route::get('/test/rapport', 'PDFController@generatePDF');
 
 //Generate Charts
 Route::get('/charts', 'ChartController@createChart');
+
+Route::get('/test', 'HomeController@getTest');
+
+
+Route::get('/getJson', 'JsonController@getJson');
+

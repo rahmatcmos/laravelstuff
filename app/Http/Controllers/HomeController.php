@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Charts\Charts;
+use App\QueryHandler\QueryHandler;
 use Illuminate\Http\Request;
-
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -23,5 +24,18 @@ class HomeController extends Controller
         // \Auth::loginUsingId(1);
         return view('dividers.home', compact('page'));
     }
+
+    public function getTest()
+    {
+        $linechart = new Charts();
+        $linechart->createLineChart();
+
+        $QueryHandler = new QueryHandler();
+        $unitids = $QueryHandler->getUnitIds();
+        $page = "test";
+        return view('test', compact('page', 'unitids'));
+
+    }
+
 }
 
