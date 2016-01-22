@@ -8583,22 +8583,6 @@ div.dark_rounded #pp_full_res .pp_inline,div.dark_square #pp_full_res .pp_inline
     width: 60%;
 }
 
-/*input:-webkit-autofill {*/
-/*-webkit-box-shadow: 0 0 0 50px white inset; /!* Change the color to your own background color *!/*/
-/*-webkit-text-fill-color: #333;*/
-/*}*/
-
-/*input:-webkit-autofill:focus {*/
-/*-webkit-box-shadow: 0 0 0 50px white inset;*/
-/*-webkit-text-fill-color: #333;*/
-/*}*/
-
-/*#registration-form input, textarea, select {*/
-/*outline: none;*/
-/*box-shadow: none !important;*/
-/*border: 1px solid #ccc !important;*/
-/*}*/
-
 #registration-area,
 #login-area,
 #confirmation-area,
@@ -9181,9 +9165,11 @@ ul.nostyle i {
     background: #f5f5f5;
 }
 
-#features .media.service-box:first-child {
-    margin-top: 80px;
-}
+/*
+    Verneukt top margin vergeleken met het plaatje ernaast
+#features .media.service-box:first-child {*/
+    /*margin-top: 80px;*/
+/*}*/
 
 #upload {
     padding: 100px 0 75px;
@@ -9455,6 +9441,11 @@ ul.nostyle i {
     margin: 0 2px;
 }
 
+.img-pad {
+    margin-top: 25px;
+    height: 325px;
+}
+
 /*************************
 *******About Us******
 **************************/
@@ -9591,6 +9582,33 @@ html, body {
     -webkit-box-shadow: none;
 }
 
+/***********************
+******* IMG styling ****
+************************/
+.tint {
+    position: relative;
+    float: left;
+    cursor: pointer;
+}
+
+.tint:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    -moz-transition: background .3s linear;
+    -webkit-transition: background .3s linear;
+    -o-transition: background .3s linear;
+    transition: background .3s linear;
+}
+
+.tint:hover:before {
+    background: none;
+}
 body.stop-scrolling {
   height: 100%;
   overflow: hidden; }

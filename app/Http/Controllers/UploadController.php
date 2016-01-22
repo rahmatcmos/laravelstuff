@@ -39,7 +39,6 @@ class UploadController extends Controller
         return $this->upload($request->file);
     }
 
-
     /*
      * Upload the file to the folderwatcher directory
      *
@@ -55,9 +54,9 @@ class UploadController extends Controller
                 FileValidator::FILE_TYPE($file, 'csv');
                 $old_path = getcwd();
                 $destinationPath = '../CityGisProcess/bin/uploads'; // upload path
-                $extension = $file->getClientOriginalExtension(); // getting file extension
+                $extension = $file->getClientOriginalExtension(); // get the file extension
                 $file->getClientOriginalName();
-                $file->move($destinationPath, $file->getClientOriginalName()); // Upload fil to given path
+                $file->move($destinationPath, $file->getClientOriginalName()); // Upload file to given path
 
                 // sending back with message
                 alert()->success('Upload succesvol!')->autoclose(2500);

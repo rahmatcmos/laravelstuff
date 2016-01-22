@@ -11,15 +11,9 @@ class DashboardController extends Controller
 {
     public function getDashboard()
     {
-        $fn = Auth::user()->firstname;
-        $page = $fn . ' - Dashboard';
+        // $fn = Auth::user()->firstname;
+        // $page = $fn . ' - Dashboard';
+        $page = "Dashboard";
         return view('dividers.dashboard', compact('page'));
-    }
-
-    public function inbox()
-    {
-        $page = 'Users - Inbox';
-
-        return view('partials.dashboard..mail', compact('pages'));
     }
 }

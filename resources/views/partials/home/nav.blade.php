@@ -33,9 +33,6 @@
                     <li class="scroll"><a class='apply-smooth-scroll'
                                           href={{ $page === 'Home' ? "#cta2" : "/#cta2" }} data-section="#cta2">Shop</a>
                     </li>
-                    <li class="scroll"><a class='apply-smooth-scroll'
-                                          href={{ $page === 'Home' ? "#upload" : "/#upload" }} data-section="#upload">Upload</a>
-                    </li>
                     <!-- <li class="scroll"><a class='apply&#45;smooth&#45;scroll' -->
                     <!--                       href={{ $page === 'Home' ? "#portfolio" : "/#portfolio" }} data&#45;section="#portfolio">Portfolio</a> -->
                     </li>

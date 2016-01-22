@@ -24,9 +24,6 @@
 </head>
 <body id="{{isset($page) ? $page : ""}}" class="{{isset($page) ? $page : ""}}">
 @yield('nav')
-@can('can_test')
-    <h1>Hello world</h1>
-@endcan
 <div class="content">
     @yield('content')
     <div class="push"></div>

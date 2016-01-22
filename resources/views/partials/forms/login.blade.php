@@ -1,3 +1,4 @@
+<div class="login-wrapper">
 <section id="login-area">
     <div class="container">
         <div class="row">
@@ -38,4 +39,7 @@
             {!! Form::close() !!}
         </div>
     </div>
-</section><!--/#bottom-->
+</section>
+</div><!--/#bottom-->
+
+
