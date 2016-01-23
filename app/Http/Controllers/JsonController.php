@@ -15,6 +15,7 @@ class JsonController extends Controller
     public function getJson()
     {
         $uid = $_GET['unitid'];
+        $table = $_GET['dataSelected'];
 
         $dataTable = $this->createDataTable();
         $this->dataTableFiller($dataTable, $uid, 'events');
@@ -34,7 +35,7 @@ class JsonController extends Controller
 
     public function dataTableFiller($dataTable, $UnitIds, $ChartTable){
 
-        $xAxisData = 'Ignition';
+        $xAxisData = 'Value';
         $this->xAxisDataFiller($dataTable, $xAxisData);
         $this->yAxisDataFiller($dataTable, $UnitIds, $ChartTable);
 

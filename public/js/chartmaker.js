@@ -1,12 +1,13 @@
 var unitIdholder = new Array();
+var dataSelected;
 $(function() {
 
         $('#abutton').click(function() {
 
-                alert(unitIdholder);
+                //alert(unitIdholder);
                 $.ajax({
                     url: '/getJson',
-                    data: {unitid:unitIdholder},
+                    data: {unitid:unitIdholder, dataSelected:dataSelected},
                     beforeSend: function (xhr) {
                         var token = $('meta[name="csrf_token"]').attr('content');
 
@@ -32,5 +33,8 @@ $(function() {
         var value = $('#unitids option:selected').val();
         unitIdholder.push(value);
         $('#selectedId').val(unitIdholder);
+
+        dataSelected = $('#selecteddata option:selected').val();
     })
+
 });

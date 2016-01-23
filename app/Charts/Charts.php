@@ -27,6 +27,13 @@ class Charts
             ->title('Column');
     }
 
+    public function createDataTable(){
+
+        $dataTable = \Lava::DataTable();
+        return $dataTable;
+
+    }
+
 
 
 }

@@ -14,12 +14,20 @@
 <body>
 
 <select class="form-control input-xs no-radius" name="countries" id="unitids">
+    <option id = "average">Average {fixed soon}</option>
     @foreach ($unitids as $id)
             <option id={{$id->unit_id}}>{!!$id->unit_id!!}</option>
     @endforeach
 </select>
 
+
 {!! Form::button('Select unit id', array('id' => "unitIdButton")) !!}
+<select class="form-control input-xs no-radius" name= ="informations" id="selecteddata">
+    <option id = "events">Ignition</option>
+    <option id = "connections">Connection</option>
+    <option id = "Powerstatus">Power status {Fixed soon}</option>
+    <option id = "Speed">Speed {Fixed soon}</option>
+</select>
 {!! Form::text('selectedId', "none" , array('readonly', 'id' => 'selectedId')) !!}
 {!! Form::button('Make a chart', array('id' => "abutton")) !!}
 
