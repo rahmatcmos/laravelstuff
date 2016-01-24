@@ -760,16 +760,16 @@
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "1.2.1",
+            "version": "1.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "4d0bdbe1206df7440219ce14c972aa57cc5e4982"
+                "reference": "f5d04bdd2881ac89abde1fb78cc234bce24327bb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/4d0bdbe1206df7440219ce14c972aa57cc5e4982",
-                "reference": "4d0bdbe1206df7440219ce14c972aa57cc5e4982",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/f5d04bdd2881ac89abde1fb78cc234bce24327bb",
+                "reference": "f5d04bdd2881ac89abde1fb78cc234bce24327bb",
                 "shasum": ""
             },
             "require": {
@@ -814,7 +814,7 @@
                 "stream",
                 "uri"
             ],
-            "time": "2015-11-03 01:34:55"
+            "time": "2016-01-23 01:23:02"
         },
         {
             "name": "herrera-io/json",
@@ -1456,16 +1456,16 @@
         },
         {
             "name": "khill/lavacharts",
-            "version": "2.5.9",
+            "version": "2.5.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kevinkhill/lavacharts.git",
-                "reference": "4f85b4ea05073bd9f024b37099053aa4ff8e0ea0"
+                "reference": "b8e57d8d404a5ac398683a0d34bdfcdc46b2feeb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kevinkhill/lavacharts/zipball/4f85b4ea05073bd9f024b37099053aa4ff8e0ea0",
-                "reference": "4f85b4ea05073bd9f024b37099053aa4ff8e0ea0",
+                "url": "https://api.github.com/repos/kevinkhill/lavacharts/zipball/b8e57d8d404a5ac398683a0d34bdfcdc46b2feeb",
+                "reference": "b8e57d8d404a5ac398683a0d34bdfcdc46b2feeb",
                 "shasum": ""
             },
             "require": {
@@ -1504,7 +1504,7 @@
                 "google",
                 "graphs"
             ],
-            "time": "2016-01-04 18:50:15"
+            "time": "2016-01-22 13:40:54"
         },
         {
             "name": "laravel/framework",
@@ -4531,16 +4531,16 @@
         },
         {
             "name": "zendframework/zend-servicemanager",
-            "version": "2.7.3",
+            "version": "2.7.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-servicemanager.git",
-                "reference": "cc65a0a1081bf8e76c7420290fb7a55880236786"
+                "reference": "846f8a4f9c2e438e45d2de5cec11509cb7e08d79"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-servicemanager/zipball/cc65a0a1081bf8e76c7420290fb7a55880236786",
-                "reference": "cc65a0a1081bf8e76c7420290fb7a55880236786",
+                "url": "https://api.github.com/repos/zendframework/zend-servicemanager/zipball/846f8a4f9c2e438e45d2de5cec11509cb7e08d79",
+                "reference": "846f8a4f9c2e438e45d2de5cec11509cb7e08d79",
                 "shasum": ""
             },
             "require": {
@@ -4579,7 +4579,7 @@
                 "servicemanager",
                 "zf2"
             ],
-            "time": "2016-01-13 19:29:06"
+            "time": "2016-01-19 21:01:21"
         },
         {
             "name": "zendframework/zend-stdlib",
