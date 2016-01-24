@@ -1,14 +1,14 @@
-@extends('layouts.app')
+@extends('layouts.login')
 
 @section('nav')
-    @include('partials.home.nav')
+    @include('partials.login.nav')
 @stop
 
 @section('content')
     @include('sweet::alert')
-    @include('partials.forms.login')
+    @include('partials.login.form')
 @stop
 
 @section('footer')
-    @include('partials.home.footer')
+    @include('partials.login.footer')
 @stop

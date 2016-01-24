@@ -15,7 +15,7 @@
             </div>
         </div><!--/.item-->
         <div class="item tint" style="background-image: url({{ URL::asset('img/slider/bg2.jpg') }});">
-            <div class="slider-inner">de
+            <div class="slider-inner">
                 <div class="container">
                     <div class="row">
                         <div  class="col-md-12">

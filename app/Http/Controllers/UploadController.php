@@ -20,13 +20,12 @@ class UploadController extends Controller
 
     public function getUpload()
     {
-        $page = "Upload";
+        // $page = "Upload";
 
         $old_path = getcwd();
         chdir('../CityGisProcess/scripts/');
         shell_exec('./launch');
-
-        return view('dividers.upload', compact('page'));
+        // return view('dividers.upload', compact('page'));
     }
 
 

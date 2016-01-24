@@ -1,4 +1,14 @@
 {
-  "output/final.css": "output/final-af7d9fed.css",
-  "output/final.js": "output/final-26dbdb0c.js"
+  "output/dashboard.css": "output/dashboard-dcb7030a.css",
+  "output/dashboard.js": "output/dashboard-58f345ed.js",
+  "output/webshop.css": "output/webshop-4d443685.css",
+  "output/webshop.js": "output/webshop-45c35fec.js",
+  "output/login.css": "output/login-8d1bdb9c.css",
+  "output/login.js": "output/login-56839eec.js",
+  "output/registration.css": "output/registration-2deb2e76.css",
+  "output/registration.js": "output/registration-2a44ae10.js",
+  "output/home.css": "output/home-6102decc.css",
+  "output/home.js": "output/home-c328f6e5.js",
+  "output/global.css": "output/global-909ce8f5.css",
+  "output/global.js": "output/global-4e1b8c24.js"
 }

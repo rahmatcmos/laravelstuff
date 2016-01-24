@@ -26,7 +26,7 @@ class RegistrationController extends Controller
         $page = 'Registratie';
         $countries = countries();
 
-        return view('dividers.register', compact('page', 'countries'));
+        return view('dividers.registration', compact('page', 'countries'));
     }
 
 

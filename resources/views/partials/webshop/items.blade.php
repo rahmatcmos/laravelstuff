@@ -10,7 +10,7 @@
                     een offerte dient u de productcode van de betreffende data als verwijzing in te vullen.</p>
             </div>
 
-            <div class="col-md-3 col-sm-6">
+            <div class="col-xs-3 col-xs-6">
                 <div class="thumbnail">
                     <img src="{{ asset('img/webshop/connections.png') }}" alt="">
                     <div class="caption">
@@ -25,7 +25,7 @@
                 </div>
             </div>
 
-            <div class="col-md-3 col-sm-6">
+            <div class="col-xs-3 col-xs-6">
                 <div class="thumbnail">
                     <img src="{{ asset('img/webshop/events.png') }}" alt="">
                     <div class="caption">
@@ -40,7 +40,7 @@
                 </div>
             </div>
 
-            <div class="col-md-3 col-sm-6">
+            <div class="col-xs-3 col-xs-6">
                 <div class="thumbnail">
                     <img src="{{ asset('img/webshop/monitoring.png') }}" alt="">
                     <div class="caption">
@@ -55,7 +55,7 @@
                 </div>
             </div>
 
-            <div class="col-md-3 col-sm-6">
+            <div class="col-xs-3 col-xs-6">
                 <div class="thumbnail">
                     <img src="{{ asset('img/webshop/positions.png') }}" alt="">
                     <div class="caption">

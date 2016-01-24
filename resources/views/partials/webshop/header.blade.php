@@ -18,7 +18,8 @@
                     Neem dan contact met ons op!
                 </p.content>
                 <div class="spacer">
-                    <p><a class="btn btn-primary btn-large" href="#contact-area">Contact</a>
+                    <p><a class="btn btn-primary btn-large apply-smooth-scroll"
+                        href="#contact-area" data-section="#contact-area">Contact</a>
                 </div>
                 </p>
             </div>

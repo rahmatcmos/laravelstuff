@@ -1,0 +1,189 @@
+/* TABLE OF CONTENTS
+-----------------------------------------------------------------------------
+
+HEADING  - Site name, navigation
+MISC     - Body, section, button, typography, IMG styling, forms
+
+/* COLOR PALETTE
+-----------------------------------------------------------------------------
+
+#B52A2F - Radish (Logo, links and button color)
+#222222 - Dark Ash (Plain text and navigation background color)
+#FFFFFF - Light Ash (Footer and portfolio background color)
+#F5F5F5 - Bright white (Light divider background color)
+#DEDEDE - Light grey (Dark divider background color)
+#242A33 - Navy blue (Shop divider background color)
+#000000 - Grey (Paragraph text color)
+
+*/
+
+
+
+/* HEADING
+----------------------------------------------------------------------------- */
+
+/* Site name */
+.site-name {
+    margin-top: 10px;
+    font-family: 'Aclonica', sans-serif;
+    font-size: 40px;
+}
+
+.site-name {
+    color: #B52A2F;
+}
+
+/* Navigation */
+.navbar-header .navbar-brand {
+    padding: 5px 0;
+}
+
+.navbar-header .navbar-brand a {
+    height: auto;
+    display: inline-block;
+}
+
+/* MISC
+----------------------------------------------------------------------------- */
+
+/* Body */
+* {
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    padding-top: 60px;
+    background: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #64686d;
+    line-height: 26px;
+}
+
+#top-header {
+    padding: 10px 0;
+}
+
+/* Section */
+.section-header {
+    margin-bottom: 50px;
+}
+
+.section-header .section-title {
+    margin-bottom: 15px;
+    display: block;
+    clear: both;
+    font-size: 28px;
+    line-height: 38px;
+    text-align: center;
+    font-weight: 400;
+    color: #262f32;
+    text-transform: uppercase;
+
+}
+
+.section-header p {
+    display: block;
+    clear: both;
+    font-size: 16px;
+    line-height: 28px;
+    text-align: center;
+    font-weight: 300;
+    color: #8d8d8d;
+}
+
+hr {
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #fff;
+}
+
+/* Button */
+.btn {
+    border-width: 0;
+    border-bottom-width: 3px;
+    border-radius: 0px;
+}
+
+.btn.btn-primary {
+    background: #B52A2F;
+    border-color: #B52A2F;
+}
+
+.btn.btn-primary:hover,
+.btn.btn-primary:focus {
+    background: #B52A2F;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    color: #272727;
+}
+
+p {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 300;
+}
+
+a {
+    color: #B52A2F;
+    -webkit-transition: color 400ms, background-color 400ms;
+    -moz-transition: color 400ms, background-color 400ms;
+    -o-transition: color 400ms, background-color 400ms;
+    transition: color 400ms, background-color 400ms;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+    color: #B52A2F;
+}
+
+.column-title {
+    margin-top: 0;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.column-title:after {
+    content: " ";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 40%;
+    border-bottom: 1px solid #B52A2F;
+}
+
+/* IMG styling */
+.tint:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    -moz-transition: background .3s linear;
+    -webkit-transition: background .3s linear;
+    -o-transition: background .3s linear;
+    transition: background .3s linear;
+}
+
+.img-pad {
+    margin-top: 25px;
+    height: 325px;
+}

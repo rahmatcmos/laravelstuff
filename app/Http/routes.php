@@ -30,14 +30,12 @@ Route::get('logout', 'SessionsController@logout');
 
 // Dashboard
 Route::get('dashboard', 'DashboardController@getDashboard');
+// Upload specific routes
+Route::post('dashboard', 'UploadController@postUpload');
 
 // Admin
 Route::get('admin', 'AdminController@getAdmin');
 Route::post('admin', 'AdminController@postAdmin');
-
-// Upload specific routes
-Route::get('/upload', 'UploadController@getUpload');
-Route::post('/upload', 'UploadController@postUpload');
 
 // PDF Reports
 Route::get('/test/rapport', 'PDFController@generatePDF');
@@ -49,3 +47,8 @@ Route::get('/charts', 'ChartController@createChart');
 Route::get('test',function(){
     return view('test');
 });
+
+//Generate Charts
+Route::get('/charts', 'ChartController@createChart');
+Route::get('/getJson', 'JsonController@getJson');
+

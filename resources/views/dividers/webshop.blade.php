@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.webshop')
 
 @section('nav')
     @include('partials.webshop.nav')

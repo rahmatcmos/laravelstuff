@@ -11,11 +11,8 @@
             <!-- /responsive nav button -->
 
             <!-- logo -->
-            <div class="navbar-brand" style="margin-top: 15px;">
-                <a class="smooth-scroll" data-section="#main-slider"
-                   href="#">
-                    <span style="color: #ef662f"><strong>CityGis (Data verkoop)</strong></span>
-                </a>
+            <div class="navbar-brand">
+                <a class="smooth-scroll site-name" data-section="#about" href="{{ (isset($page)) ? $page === 'Home' ? "#home" : "/" : false }} ">Citygis</a>
             </div>
             <!-- /logo -->
         </div>
@@ -24,10 +21,13 @@
         <nav class="collapse navbar-collapse navbar-right" role="navigation">
             <div class="main-menu">
                 <ul id="nav" class="nav navbar-nav">
-                    <li class="scroll"><a href="#header-area">Shop</a></li>
-                    <li class="scroll"><a href="#items-area">Data</a></li>
-                    <li class="scroll"><a href="#contact-area">Contact</a></li>
-                    <li class="scroll"><a href={{ (isset($page)) ? $page === 'Home' ? "#home" : "/" : false }}><span class="fa fa-home"></span> Terug</a></li>
+                    <li class="scroll"><a class="apply-smooth-scroll"
+                            href="#header-area" data-section="#header-area">Shop</a>
+                    <li class="scroll"><a class='apply-smooth-scroll'
+                            href="#items-area" data-section="#items-area">Data</a></li>
+                    <li class="scroll"><a class='apply-smooth-scroll'
+                            href="#contact-area" data-section="#contact-area">Contact</a></li>
+                    <li><a href={{ (isset($page)) ? $page === 'Home' ? "#home" : "/" : false }}><span class="fa fa-home"></span> Terug</a></li>
                 </ul>
             </div>
         </nav>
