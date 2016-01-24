@@ -14,7 +14,6 @@
 <body>
 
 <select class="form-control input-xs no-radius" name="countries" id="unitids">
-    <option id = "average">Average {fixed soon}</option>
     @foreach ($unitids as $id)
             <option id={{$id->unit_id}}>{!!$id->unit_id!!}</option>
     @endforeach
@@ -25,8 +24,7 @@
 <select class="form-control input-xs no-radius" name= ="informations" id="selecteddata">
     <option id = "events">Ignition</option>
     <option id = "connections">Connection</option>
-    <option id = "Powerstatus">Power status {Fixed soon}</option>
-    <option id = "Speed">Speed {Fixed soon}</option>
+    <option id = "speed">Speed</option>
 </select>
 {!! Form::text('selectedId', "none" , array('readonly', 'id' => 'selectedId')) !!}
 {!! Form::button('Make a chart', array('id' => "abutton")) !!}
@@ -34,8 +32,9 @@
 <!--do something-->
 </body>
 <div id="LineChart" style="visibility: hidden"></div>
-<div id="ColumnChart"></div>
+<div id="ColumnChart" style="visibility: hidden"></div>
 @linechart('LineChart', 'LineChart')
+@columnchart('ColumnChart', 'ColumnChart')
 </html>
 
 

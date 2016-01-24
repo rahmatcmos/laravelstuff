@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\QueryHandler\QueryHandler;
 use App\Charts\Charts;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -15,10 +16,10 @@ class JsonController extends Controller
     public function getJson()
     {
         $uid = $_GET['unitid'];
-        $table = $_GET['dataSelected'];
+        $dataDetails = $_GET['dataSelected'];
 
         $dataTable = $this->createDataTable();
-        $this->dataTableFiller($dataTable, $uid, 'events');
+        $this->dataTableFiller($dataTable, $uid, $dataDetails);
 
 
         return $dataTable->toJson();
@@ -33,11 +34,11 @@ class JsonController extends Controller
 
     }
 
-    public function dataTableFiller($dataTable, $UnitIds, $ChartTable){
+    public function dataTableFiller($dataTable, $UnitIds, $dataDetails){
 
         $xAxisData = 'Value';
         $this->xAxisDataFiller($dataTable, $xAxisData);
-        $this->yAxisDataFiller($dataTable, $UnitIds, $ChartTable);
+        $this->yAxisDataFiller($dataTable, $UnitIds, $dataDetails);
 
         return $dataTable;
     }
@@ -57,16 +58,17 @@ class JsonController extends Controller
 
     }
 
-    public function yAxisDataFiller($dataTable, $UnitIds, $ChartTable){
+    public function yAxisDataFiller($dataTable, $UnitIds, $dataDetails){
 
+        $QueryHandler = new QueryHandler();
         $i = 0;
         #IF there's  1 unit id thrown in the array it will do one.
-        if(count($UnitIds) > 1) {
+        if(count($UnitIds) > 0) {
             $this->unitIdAdder($dataTable, $UnitIds);
             $arrayDateHolder = array();
             foreach ($UnitIds as $UnitIdS){
                 $arrayValueHolder[$i] = array();
-                $dataFromDatabase = $this->getMultiDatabaseData($ChartTable, $UnitIdS);
+                $dataFromDatabase = $QueryHandler->getMultiDatabaseData($dataDetails, $UnitIdS);
                 foreach($dataFromDatabase as $chartRow){
                     array_push($arrayValueHolder[$i], $chartRow->values);
                     array_push($arrayDateHolder, $chartRow->days);
@@ -82,7 +84,7 @@ class JsonController extends Controller
         else{
             foreach ($UnitIds as $UnitIds) {
                 $dataTable->addNumberColumn(strval($UnitIds));
-                $dataFromDatabase = $this->getSingleDatabaseData($ChartTable);
+                $dataFromDatabase = $QueryHandler->getSingleDatabaseData($dataDetails);
                 foreach ($dataFromDatabase as $chartRow) {
                     $dataTable->addRow(array($chartRow->days, $chartRow->values));
                 }
@@ -101,32 +103,6 @@ class JsonController extends Controller
         return $dataTable;
     }
 
-    public function getSingleDatabaseData($ChartTable){
-
-        $connection = \DB::table($ChartTable)
-            ->select(\DB::raw('SUBSTRING(date_time,0,11) AS days'),
-                \DB::raw('SUM(CAST(value AS INT)) AS values'))
-            ->groupBy('days')
-            ->orderBy('days', 'asc')
-            ->get();
-
-        return $connection;
-
-    }
-
-    public function getMultiDatabaseData($ChartTable, $UnitIds){
-
-        $connection = \DB::table($ChartTable)
-            ->select(\DB::raw('SUBSTRING(date_time,0,11) AS days'),
-                \DB::raw('SUM(CAST(value AS INT)) AS values'),
-                'unit_id')
-            ->where('unit_id', '=', $UnitIds)
-            ->groupBy('days', 'unit_id')
-            ->orderBy('days', 'asc')
-            ->get();
-
-        return $connection;
-    }
 
     public function dateCalculator($arrayDateHolder){
 
@@ -161,34 +137,4 @@ class JsonController extends Controller
         return $dataTable;
     }
 
-
-    public function testJson()
-    {
-
-        $temperatures1 = \Lava::DataTable();
-        $temperatures1->addDateColumn('Date')
-            ->addNumberColumn('Max Temp')
-            ->addNumberColumn('Mean Temp')
-            ->addNumberColumn('Min Temp');
-
-        foreach(range(1, 30) as $day) {
-            $temperatures1->addRow(array('2014-10-'.$day, rand(50,90), rand(50,90), rand(50,90)));
-        }
-
-        return $temperatures1->toJson();
-    }
-
-    public function killer($temperatures1){
-
-        $temperatures1->addDateColumn('Date')
-            ->addNumberColumn('Max Temp')
-            ->addNumberColumn('Mean Temp')
-            ->addNumberColumn('Min Temp');
-
-        foreach(range(1, 30) as $day) {
-            $temperatures1->addRow(array('2014-10-'.$day, rand(50,90), rand(50,90), rand(50,90)));
-        }
-
-        return $temperatures1;
-    }
 }

@@ -30,6 +30,9 @@ class HomeController extends Controller
         $linechart = new Charts();
         $linechart->createLineChart();
 
+        $columnchart = new Charts();
+        $columnchart->createColumnChart();
+
         $QueryHandler = new QueryHandler();
         $unitids = $QueryHandler->getUnitIds();
         $page = "test";

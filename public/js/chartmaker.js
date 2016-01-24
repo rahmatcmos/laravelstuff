@@ -20,7 +20,14 @@ $(function() {
                         lava.loadData('LineChart', result, function (chart) {
                             $('#LineChart').css('visibility', 'visible');
                             console.log(result);
+                            console.log("LineChart generated");
                         });
+
+                        lava.loadData('ColumnChart', result, function(chart) {
+                            $('#ColumnChart').css('visibility', 'visible');
+                            console.log("ColumnChart generated")
+                        });
+
                     })
                     .fail(function (result) {
                         alert(result);
