@@ -198,7 +198,7 @@ $(function() {
     $("#connectionChartSortable li").not('.emptyMessage').click(function() {
         holdConnectionChartSortable = this.id
 
-        if(holdConnectionChartSortable == 'connectionConnection')
+        if(holdConnectionChartSortable == 'linechartConnection')
         {
             $('#connectionLineChart').css('visibility', 'visible');
             $('#connectionColumnChart').css('visibility', 'hidden');
@@ -227,17 +227,21 @@ $(function() {
         if(holdSpeedChartSortable == 'linechartSpeed')
         {
             $('#speedLineChart').css('visibility', 'visible');
-            $('#speedLineChart').css('display', 'inline-block');
             $('#speedColumnChart').css('visibility', 'hidden');
+            $('#speedLineChart').css('display', 'inherit');
             $('#speedColumnChart').css('display', 'none');
+            lava.loadData('speedLineChart', speedLineResult, function (chart) {
+            });
         }
 
         if(holdSpeedChartSortable == 'columnchartSpeed')
         {
-            $('#speedColumnChart').css('visibility', 'visible');
-            $('#speedColumnChart').css('display', 'inline-block');
             $('#speedLineChart').css('visibility', 'hidden');
+            $('#speedColumnChart').css('visibility', 'visible');
             $('#speedLineChart').css('display', 'none');
+            $('#speedColumnChart').css('display', 'inherit');
+            lava.loadData('speedColumnChart', connectionColumnResult, function (chart) {
+            });
 
         }
     })
