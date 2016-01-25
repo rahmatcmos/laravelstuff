@@ -18,18 +18,16 @@ use Response;
 class UploadController extends Controller
 {
 
-    protected $page;
-
-
-    public function getUpload()
-    {
-        // $page = "Upload";
-
-        $old_path = getcwd();
-        chdir('../CityGisProcess/scripts/');
-        shell_exec('./launch');
-        // return view('dividers.upload', compact('page'));
-    }
+    //
+    // public function getUpload()
+    // {
+    //     // $page = "Upload";
+    //
+    //     $old_path = getcwd();
+    //     chdir('../CityGisProcess/scripts/');
+    //     shell_exec('./launch');
+    //     // return view('dividers.upload', compact('page'));
+    // }
 
 
     /**

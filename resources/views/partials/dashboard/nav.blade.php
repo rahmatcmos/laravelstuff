@@ -6,7 +6,7 @@
                     <a href="javascript:;" class="left-sidebar-toggled"><i class="fa fa-align-left"></i></a>
                 </li>
                 <li>
-                    <a class="smooth-scroll site-name" data-section="#about" href="{{ (isset($page)) ? $page === 'Home' ? "#home" : "/" : false }} ">Citygis</a>
+                    <a class="site-name" href="{{ (isset($page)) ? $page === 'Home' ? "#home" : "/" : false }} ">Citygis</a>
                 </li>
             </ul>
         </div>

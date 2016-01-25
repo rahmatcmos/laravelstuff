@@ -21,7 +21,6 @@ var speedLineResult;
 var speedColumnResult;
 
 $(function() {
-
     $("#ignitionSortable li").not('.emptyMessage').click(function() {
         var dataSelected = this.id
             unitIdholderIgnition.push(dataSelected);
@@ -268,4 +267,3 @@ $(function() {
 
     })
 });
-

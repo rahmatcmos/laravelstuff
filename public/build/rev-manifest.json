@@ -1,14 +1,14 @@
 {
-  "output/dashboard.css": "output/dashboard-3b80479d.css",
-  "output/dashboard.js": "output/dashboard-8443c0d3.js",
-  "output/webshop.css": "output/webshop-4d443685.css",
-  "output/webshop.js": "output/webshop-0eccca08.js",
-  "output/login.css": "output/login-8d1bdb9c.css",
-  "output/login.js": "output/login-1b86ff28.js",
-  "output/registration.css": "output/registration-2deb2e76.css",
-  "output/registration.js": "output/registration-578640b6.js",
-  "output/home.css": "output/home-6102decc.css",
-  "output/home.js": "output/home-48a014d2.js",
-  "output/global.css": "output/global-909ce8f5.css",
-  "output/global.js": "output/global-4e1b8c24.js"
+  "output/dashboard.css": "output/dashboard-f5460f83.css",
+  "output/dashboard.js": "output/dashboard-3779ed2d.js",
+  "output/webshop.css": "output/webshop-46ca3645.css",
+  "output/webshop.js": "output/webshop-8c97b112.js",
+  "output/login.css": "output/login-5b250929.css",
+  "output/login.js": "output/login-28b32a3e.js",
+  "output/registration.css": "output/registration-f0bdadcd.css",
+  "output/registration.js": "output/registration-395ee461.js",
+  "output/home.css": "output/home-87f17d05.css",
+  "output/home.js": "output/home-8e9f46ef.js",
+  "output/global.css": "output/global-aa2c4e51.css",
+  "output/global.js": "output/global-f78e2dac.js"
 }

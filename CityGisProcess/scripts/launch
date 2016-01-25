@@ -1,13 +1,11 @@
 #!/usr/bin/env bash
 # Check if CityGisProcess is running
-if pgrep "CityGisProcess_" > /dev/null
+if pgrep "CityGisProcess" > /dev/null
 then
-    printf "CityGisProcess module is not running at $(date +%d-%m-%Y)..."
-    return;
+    printf "CityGisProcess module is already running at $(date +%d-%m-%Y)!\n" &> log
 else
-    printf "CityGisProcess module is already running at $(date +%d-%m-%Y)!"
     cd ../bin
-    ./CityGisProcess_d
+    ./CityGisProcess_d &
     cd ../../public/
 fi
 
