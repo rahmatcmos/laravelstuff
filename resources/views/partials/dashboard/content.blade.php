@@ -152,176 +152,176 @@ swal("{!! Session::get('message') !!}");
             </div>
         </div>
 
-        <div class="col-lg-4">
-            <div class="panel panel-inverse">
-                <div class="panel-heading">
-                    <div class="panel-heading-btn">
-                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-lime" data-click="panel-expand"><i class="fa fa-expand"></i></a>
-                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
-                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
-                    </div>
-                    <h4 class="panel-title">Recent Uploads</h4>
-                </div>
-                <div class="panel-body recent-uploads">
-                    <ul class="feeds">
-                        <li>
-                            <a href="javascript:;">
-                                <div class="icon bg-warning-light"><i class="fa fa-file-text"></i></div>
-                                <div class="time">20 mins</div>
-                                <div class="desc">Uploaded file <span class="label label-inverse m-l-5">INV-910129</span></div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <div class="icon bg-warning-light"><i class="fa fa-file-text"></i></div>
-                                <div class="time">20 mins</div>
-                                <div class="desc">New pending invoice <span class="label label-inverse m-l-5">INV-910129</span></div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <div class="icon bg-warning-light"><i class="fa fa-file-text"></i></div>
-                                <div class="time">20 mins</div>
-                                <div class="desc">New pending invoice <span class="label label-inverse m-l-5">INV-910129</span></div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <div class="icon bg-warning-light"><i class="fa fa-file-text"></i></div>
-                                <div class="time">20 mins</div>
-                                <div class="desc">New pending invoice <span class="label label-inverse m-l-5">INV-910129</span></div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <div class="icon bg-warning-light"><i class="fa fa-file-text"></i></div>
-                                <div class="time">20 mins</div>
-                                <div class="desc">New pending invoice <span class="label label-inverse m-l-5">INV-910129</span></div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <div class="icon bg-warning-light"><i class="fa fa-file-text"></i></div>
-                                <div class="time">20 mins</div>
-                                <div class="desc">New pending invoice <span class="label label-inverse m-l-5">INV-910129</span></div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <div class="icon bg-warning-light"><i class="fa fa-file-text"></i></div>
-                                <div class="time">20 mins</div>
-                                <div class="desc">New pending invoice <span class="label label-inverse m-l-5">INV-910129</span></div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <div class="icon bg-warning-light"><i class="fa fa-file-text"></i></div>
-                                <div class="time">20 mins</div>
-                                <div class="desc">New pending invoice <span class="label label-inverse m-l-5">INV-910129</span></div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <div class="icon bg-warning-light"><i class="fa fa-file-text"></i></div>
-                                <div class="time">20 mins</div>
-                                <div class="desc">New pending invoice <span class="label label-inverse m-l-5">INV-910129</span></div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <div class="icon bg-warning-light"><i class="fa fa-file-text"></i></div>
-                                <div class="time">20 mins</div>
-                                <div class="desc">New pending invoice <span class="label label-inverse m-l-5">INV-910129</span></div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <div class="icon bg-warning-light"><i class="fa fa-file-text"></i></div>
-                                <div class="time">20 mins</div>
-                                <div class="desc">New pending invoice <span class="label label-inverse m-l-5">INV-910129</span></div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <div class="icon bg-warning-light"><i class="fa fa-file-text"></i></div>
-                                <div class="time">20 mins</div>
-                                <div class="desc">New pending invoice <span class="label label-inverse m-l-5">INV-910129</span></div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <div class="icon bg-warning-light"><i class="fa fa-file-text"></i></div>
-                                <div class="time">20 mins</div>
-                                <div class="desc">New pending invoice <span class="label label-inverse m-l-5">INV-910129</span></div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <div class="icon bg-warning-light"><i class="fa fa-file-text"></i></div>
-                                <div class="time">20 mins</div>
-                                <div class="desc">New pending invoice <span class="label label-inverse m-l-5">INV-910129</span></div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <div class="icon bg-warning-light"><i class="fa fa-file-text"></i></div>
-                                <div class="time">20 mins</div>
-                                <div class="desc">New pending invoice <span class="label label-inverse m-l-5">INV-910129</span></div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <div class="icon bg-warning-light"><i class="fa fa-file-text"></i></div>
-                                <div class="time">20 mins</div>
-                                <div class="desc">New pending invoice <span class="label label-inverse m-l-5">INV-910129</span></div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <div class="icon bg-warning-light"><i class="fa fa-file-text"></i></div>
-                                <div class="time">20 mins</div>
-                                <div class="desc">New pending invoice <span class="label label-inverse m-l-5">INV-910129</span></div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <div class="icon bg-warning-light"><i class="fa fa-file-text"></i></div>
-                                <div class="time">20 mins</div>
-                                <div class="desc">New pending invoice <span class="label label-inverse m-l-5">INV-910129</span></div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <div class="icon bg-warning-light"><i class="fa fa-file-text"></i></div>
-                                <div class="time">20 mins</div>
-                                <div class="desc">New pending invoice <span class="label label-inverse m-l-5">INV-910129</span></div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <div class="icon bg-warning-light"><i class="fa fa-file-text"></i></div>
-                                <div class="time">20 mins</div>
-                                <div class="desc">New pending invoice <span class="label label-inverse m-l-5">INV-910129</span></div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <div class="icon bg-warning-light"><i class="fa fa-file-text"></i></div>
-                                <div class="time">20 mins</div>
-                                <div class="desc">New pending invoice <span class="label label-inverse m-l-5">INV-910129</span></div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <div class="icon bg-warning-light"><i class="fa fa-file-text"></i></div>
-                                <div class="time">20 mins</div>
-                                <div class="desc">New pending invoice <span class="label label-inverse m-l-5">INV-910129</span></div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+        <!-- <div class="col&#45;lg&#45;4"> -->
+        <!--     <div class="panel panel&#45;inverse"> -->
+        <!--         <div class="panel&#45;heading"> -->
+        <!--             <div class="panel&#45;heading&#45;btn"> -->
+        <!--                 <a href="javascript:;" class="btn btn&#45;xs btn&#45;icon btn&#45;circle btn&#45;lime" data&#45;click="panel&#45;expand"><i class="fa fa&#45;expand"></i></a> -->
+        <!--                 <a href="javascript:;" class="btn btn&#45;xs btn&#45;icon btn&#45;circle btn&#45;warning" data&#45;click="panel&#45;collapse"><i class="fa fa&#45;minus"></i></a> -->
+        <!--                 <a href="javascript:;" class="btn btn&#45;xs btn&#45;icon btn&#45;circle btn&#45;danger" data&#45;click="panel&#45;remove"><i class="fa fa&#45;times"></i></a> -->
+        <!--             </div> -->
+        <!--             <h4 class="panel&#45;title">Recent Uploads</h4> -->
+        <!--         </div> -->
+        <!--         <div class="panel&#45;body recent&#45;uploads"> -->
+        <!--             <ul class="feeds"> -->
+        <!--                 <li> -->
+        <!--                     <a href="javascript:;"> -->
+        <!--                         <div class="icon bg&#45;warning&#45;light"><i class="fa fa&#45;file&#45;text"></i></div> -->
+        <!--                         <div class="time">20 mins</div> -->
+        <!--                         <div class="desc">Uploaded file <span class="label label&#45;inverse m&#45;l&#45;5">INV&#45;910129</span></div> -->
+        <!--                     </a> -->
+        <!--                 </li> -->
+        <!--                 <li> -->
+        <!--                     <a href="javascript:;"> -->
+        <!--                         <div class="icon bg&#45;warning&#45;light"><i class="fa fa&#45;file&#45;text"></i></div> -->
+        <!--                         <div class="time">20 mins</div> -->
+        <!--                         <div class="desc">New pending invoice <span class="label label&#45;inverse m&#45;l&#45;5">INV&#45;910129</span></div> -->
+        <!--                     </a> -->
+        <!--                 </li> -->
+        <!--                 <li> -->
+        <!--                     <a href="javascript:;"> -->
+        <!--                         <div class="icon bg&#45;warning&#45;light"><i class="fa fa&#45;file&#45;text"></i></div> -->
+        <!--                         <div class="time">20 mins</div> -->
+        <!--                         <div class="desc">New pending invoice <span class="label label&#45;inverse m&#45;l&#45;5">INV&#45;910129</span></div> -->
+        <!--                     </a> -->
+        <!--                 </li> -->
+        <!--                 <li> -->
+        <!--                     <a href="javascript:;"> -->
+        <!--                         <div class="icon bg&#45;warning&#45;light"><i class="fa fa&#45;file&#45;text"></i></div> -->
+        <!--                         <div class="time">20 mins</div> -->
+        <!--                         <div class="desc">New pending invoice <span class="label label&#45;inverse m&#45;l&#45;5">INV&#45;910129</span></div> -->
+        <!--                     </a> -->
+        <!--                 </li> -->
+        <!--                 <li> -->
+        <!--                     <a href="javascript:;"> -->
+        <!--                         <div class="icon bg&#45;warning&#45;light"><i class="fa fa&#45;file&#45;text"></i></div> -->
+        <!--                         <div class="time">20 mins</div> -->
+        <!--                         <div class="desc">New pending invoice <span class="label label&#45;inverse m&#45;l&#45;5">INV&#45;910129</span></div> -->
+        <!--                     </a> -->
+        <!--                 </li> -->
+        <!--                 <li> -->
+        <!--                     <a href="javascript:;"> -->
+        <!--                         <div class="icon bg&#45;warning&#45;light"><i class="fa fa&#45;file&#45;text"></i></div> -->
+        <!--                         <div class="time">20 mins</div> -->
+        <!--                         <div class="desc">New pending invoice <span class="label label&#45;inverse m&#45;l&#45;5">INV&#45;910129</span></div> -->
+        <!--                     </a> -->
+        <!--                 </li> -->
+        <!--                 <li> -->
+        <!--                     <a href="javascript:;"> -->
+        <!--                         <div class="icon bg&#45;warning&#45;light"><i class="fa fa&#45;file&#45;text"></i></div> -->
+        <!--                         <div class="time">20 mins</div> -->
+        <!--                         <div class="desc">New pending invoice <span class="label label&#45;inverse m&#45;l&#45;5">INV&#45;910129</span></div> -->
+        <!--                     </a> -->
+        <!--                 </li> -->
+        <!--                 <li> -->
+        <!--                     <a href="javascript:;"> -->
+        <!--                         <div class="icon bg&#45;warning&#45;light"><i class="fa fa&#45;file&#45;text"></i></div> -->
+        <!--                         <div class="time">20 mins</div> -->
+        <!--                         <div class="desc">New pending invoice <span class="label label&#45;inverse m&#45;l&#45;5">INV&#45;910129</span></div> -->
+        <!--                     </a> -->
+        <!--                 </li> -->
+        <!--                 <li> -->
+        <!--                     <a href="javascript:;"> -->
+        <!--                         <div class="icon bg&#45;warning&#45;light"><i class="fa fa&#45;file&#45;text"></i></div> -->
+        <!--                         <div class="time">20 mins</div> -->
+        <!--                         <div class="desc">New pending invoice <span class="label label&#45;inverse m&#45;l&#45;5">INV&#45;910129</span></div> -->
+        <!--                     </a> -->
+        <!--                 </li> -->
+        <!--                 <li> -->
+        <!--                     <a href="javascript:;"> -->
+        <!--                         <div class="icon bg&#45;warning&#45;light"><i class="fa fa&#45;file&#45;text"></i></div> -->
+        <!--                         <div class="time">20 mins</div> -->
+        <!--                         <div class="desc">New pending invoice <span class="label label&#45;inverse m&#45;l&#45;5">INV&#45;910129</span></div> -->
+        <!--                     </a> -->
+        <!--                 </li> -->
+        <!--                 <li> -->
+        <!--                     <a href="javascript:;"> -->
+        <!--                         <div class="icon bg&#45;warning&#45;light"><i class="fa fa&#45;file&#45;text"></i></div> -->
+        <!--                         <div class="time">20 mins</div> -->
+        <!--                         <div class="desc">New pending invoice <span class="label label&#45;inverse m&#45;l&#45;5">INV&#45;910129</span></div> -->
+        <!--                     </a> -->
+        <!--                 </li> -->
+        <!--                 <li> -->
+        <!--                     <a href="javascript:;"> -->
+        <!--                         <div class="icon bg&#45;warning&#45;light"><i class="fa fa&#45;file&#45;text"></i></div> -->
+        <!--                         <div class="time">20 mins</div> -->
+        <!--                         <div class="desc">New pending invoice <span class="label label&#45;inverse m&#45;l&#45;5">INV&#45;910129</span></div> -->
+        <!--                     </a> -->
+        <!--                 </li> -->
+        <!--                 <li> -->
+        <!--                     <a href="javascript:;"> -->
+        <!--                         <div class="icon bg&#45;warning&#45;light"><i class="fa fa&#45;file&#45;text"></i></div> -->
+        <!--                         <div class="time">20 mins</div> -->
+        <!--                         <div class="desc">New pending invoice <span class="label label&#45;inverse m&#45;l&#45;5">INV&#45;910129</span></div> -->
+        <!--                     </a> -->
+        <!--                 </li> -->
+        <!--                 <li> -->
+        <!--                     <a href="javascript:;"> -->
+        <!--                         <div class="icon bg&#45;warning&#45;light"><i class="fa fa&#45;file&#45;text"></i></div> -->
+        <!--                         <div class="time">20 mins</div> -->
+        <!--                         <div class="desc">New pending invoice <span class="label label&#45;inverse m&#45;l&#45;5">INV&#45;910129</span></div> -->
+        <!--                     </a> -->
+        <!--                 </li> -->
+        <!--                 <li> -->
+        <!--                     <a href="javascript:;"> -->
+        <!--                         <div class="icon bg&#45;warning&#45;light"><i class="fa fa&#45;file&#45;text"></i></div> -->
+        <!--                         <div class="time">20 mins</div> -->
+        <!--                         <div class="desc">New pending invoice <span class="label label&#45;inverse m&#45;l&#45;5">INV&#45;910129</span></div> -->
+        <!--                     </a> -->
+        <!--                 </li> -->
+        <!--                 <li> -->
+        <!--                     <a href="javascript:;"> -->
+        <!--                         <div class="icon bg&#45;warning&#45;light"><i class="fa fa&#45;file&#45;text"></i></div> -->
+        <!--                         <div class="time">20 mins</div> -->
+        <!--                         <div class="desc">New pending invoice <span class="label label&#45;inverse m&#45;l&#45;5">INV&#45;910129</span></div> -->
+        <!--                     </a> -->
+        <!--                 </li> -->
+        <!--                 <li> -->
+        <!--                     <a href="javascript:;"> -->
+        <!--                         <div class="icon bg&#45;warning&#45;light"><i class="fa fa&#45;file&#45;text"></i></div> -->
+        <!--                         <div class="time">20 mins</div> -->
+        <!--                         <div class="desc">New pending invoice <span class="label label&#45;inverse m&#45;l&#45;5">INV&#45;910129</span></div> -->
+        <!--                     </a> -->
+        <!--                 </li> -->
+        <!--                 <li> -->
+        <!--                     <a href="javascript:;"> -->
+        <!--                         <div class="icon bg&#45;warning&#45;light"><i class="fa fa&#45;file&#45;text"></i></div> -->
+        <!--                         <div class="time">20 mins</div> -->
+        <!--                         <div class="desc">New pending invoice <span class="label label&#45;inverse m&#45;l&#45;5">INV&#45;910129</span></div> -->
+        <!--                     </a> -->
+        <!--                 </li> -->
+        <!--                 <li> -->
+        <!--                     <a href="javascript:;"> -->
+        <!--                         <div class="icon bg&#45;warning&#45;light"><i class="fa fa&#45;file&#45;text"></i></div> -->
+        <!--                         <div class="time">20 mins</div> -->
+        <!--                         <div class="desc">New pending invoice <span class="label label&#45;inverse m&#45;l&#45;5">INV&#45;910129</span></div> -->
+        <!--                     </a> -->
+        <!--                 </li> -->
+        <!--                 <li> -->
+        <!--                     <a href="javascript:;"> -->
+        <!--                         <div class="icon bg&#45;warning&#45;light"><i class="fa fa&#45;file&#45;text"></i></div> -->
+        <!--                         <div class="time">20 mins</div> -->
+        <!--                         <div class="desc">New pending invoice <span class="label label&#45;inverse m&#45;l&#45;5">INV&#45;910129</span></div> -->
+        <!--                     </a> -->
+        <!--                 </li> -->
+        <!--                 <li> -->
+        <!--                     <a href="javascript:;"> -->
+        <!--                         <div class="icon bg&#45;warning&#45;light"><i class="fa fa&#45;file&#45;text"></i></div> -->
+        <!--                         <div class="time">20 mins</div> -->
+        <!--                         <div class="desc">New pending invoice <span class="label label&#45;inverse m&#45;l&#45;5">INV&#45;910129</span></div> -->
+        <!--                     </a> -->
+        <!--                 </li> -->
+        <!--                 <li> -->
+        <!--                     <a href="javascript:;"> -->
+        <!--                         <div class="icon bg&#45;warning&#45;light"><i class="fa fa&#45;file&#45;text"></i></div> -->
+        <!--                         <div class="time">20 mins</div> -->
+        <!--                         <div class="desc">New pending invoice <span class="label label&#45;inverse m&#45;l&#45;5">INV&#45;910129</span></div> -->
+        <!--                     </a> -->
+        <!--                 </li> -->
+        <!--             </ul> -->
+        <!--         </div> -->
+        <!--     </div> -->
+        <!-- </div> -->
     </div>
 </section>
 @linechart('ignitionLineChart', 'ignitionLineChart')
