@@ -5,8 +5,9 @@ namespace App\QueryHandler;
 class QueryHandler
 {
 
-    public function getUnitIds(){
-        $UnitIds = \DB::table("events")
+    public function getUnitIds($table){
+
+        $UnitIds = \DB::table($table)
             ->select('unit_id')
             ->groupBy('unit_id')
             ->orderBy('unit_id', 'asc')
@@ -33,17 +34,29 @@ class QueryHandler
         $table = $this->tableChecker($dataDetails);
 
 
-        $connection = \DB::table($table)
-            ->select(\DB::raw('SUBSTRING(date_time,0,11) AS days'),
-                \DB::raw('SUM(CAST(value AS INT)) AS values'),
-                'unit_id', 'port')
+        if($table == 'positions'){
+            $connection = \DB::table($table)
+                ->select(\DB::raw('SUBSTRING(date_time,0,11) AS days'),
+                    \DB::raw('ROUND(AVG(speed),0) AS values'),
+                    'unit_id' )
+                ->where('unit_id', '=', $UnitIds)
+                ->groupBy('days', 'unit_id')
+                ->orderBy('days', 'asc')
+                ->get();
+             return $connection;
+        }else {
+            $connection = \DB::table($table)
+                ->select(\DB::raw('SUBSTRING(date_time,0,11) AS days'),
+                    \DB::raw('SUM(CAST(value AS INT)) AS values'),
+                    'unit_id', 'port')
                 ->where('unit_id', '=', $UnitIds)
                 ->where('port', '=', $dataDetails)
                 ->groupBy('days', 'unit_id', 'port')
                 ->orderBy('days', 'asc')
                 ->get();
 
-        return $connection;
+            return $connection;
+        }
     }
 
     public function tableChecker($dataDetails){
@@ -54,7 +67,8 @@ class QueryHandler
         }
 
         if($dataDetails == 'Speed'){
-            return "test string";
+            $ChartTable = 'positions';
+            return $ChartTable;
         }
 
         if($dataDetails == 'Connection'){

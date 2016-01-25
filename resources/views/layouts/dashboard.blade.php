@@ -4,13 +4,13 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf_token" content="{{ csrf_token() }}" />
         <title>{{ $page }}</title>
 
         <!-- Web font -->
             <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet' type='text/css'>
             <link rel="stylesheet" href="{{ elixir('output/dashboard.css') }}"/>
             <script src="{{elixir('output/dashboard.js')}}"></script>
-
             <link rel="shortcut icon" href={{ URL::asset("img/ico/favicon.ico") }}>
             <link rel="apple-touch-icon-precomposed" sizes="144x144"
                                                      href={{ URL::asset("img/ico/apple-touch-icon-144-precomposed.png") }}>
@@ -60,5 +60,8 @@ $('.feeds').slimScroll({
 });
 </script>
 
+<script src="{{elixir('output/global.js')}}"></script>
+    <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="/output/chartmaker.js"></script>
  </body>
 </html>
