@@ -8,8 +8,10 @@
 
     <!-- Web font -->
     <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ elixir('output/global.css') }}"/>
     <link rel="stylesheet" href="{{ elixir('output/webshop.css') }}"/>
 
+    <script src="{{elixir('output/global.js')}}"></script>
     <script src="{{elixir('output/webshop.js')}}"></script>
 
 

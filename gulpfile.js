@@ -80,17 +80,13 @@ elixir(function (mix) {
     mix.browserify("dashboard.js", "public/output/dashboard_bundle.js")
         .scripts([
 
-                paths.output      + "global.js",
                 paths.jsaddins    + "bootstrap-filestyle.js",
-                paths.bootstrap   + "javascripts/bootstrap.js", // Needed extra load here because of bug with dropdown
                 paths.jsaddins    + "jquery.slimscroll.js",
 
                 paths.output      + "dashboard_bundle.js",
 
         ], paths.output + "dashboard.js", "./")
         .styles([
-
-                paths.output      + "global.css",                // Use the global.css
 
                 paths.css         + "dashboard.css",
 
@@ -100,7 +96,6 @@ elixir(function (mix) {
         mix.browserify("home.js", "public/output/home_bundle.js")
         .scripts([
 
-                paths.output      + "global.js",                 // Use the global js
 
                 paths.jsaddins    + "tooltipster.js",
                 paths.jsaddins    + "jquery.validate.js",        // jquery.validator
@@ -112,7 +107,6 @@ elixir(function (mix) {
         ], paths.output + "home.js", "./")
         .styles([
 
-                paths.output      + "global.css",                 // Use the global.css
 
                 paths.cssaddins   + "tooltipster.css",
                 paths.cssaddins   + "tooltipster-light.css",
@@ -125,15 +119,11 @@ elixir(function (mix) {
         mix.browserify("webshop.js", "public/output/webshop_bundle.js")
         .scripts([
 
-
-                paths.output      + "global.js",                 // Use the global js
-
                 paths.output      + "webshop_bundle.js",
 
         ], paths.output + "webshop.js", "./")
         .styles([
 
-                paths.output      + "global.css",                 // Use the global.css
 
                 paths.css         + "home.css",
 
@@ -144,8 +134,6 @@ elixir(function (mix) {
     // Registration
     mix.browserify("registration.js", "public/output/registration_bundle.js")
         .scripts([
-
-                paths.output      + "global.js",                 // Use the global js
 
                 paths.zxcvbn      + "dist/zxcvbn.js",            // Needs to be imported from the node_modules map
                 paths.jsaddins    + "pwstrenght.js",             // Bootstrap password strength bar to be used in combinaton wth zxcvbn
@@ -171,14 +159,11 @@ elixir(function (mix) {
     mix.browserify("login.js", "public/output/login_bundle.js")
         .scripts([ 
 
-                paths.output      + "global.js",                 // Use the global js
-
                 paths.output      + "login_bundle.js",
 
         ], paths.output + "login.js", "./")
         .styles([
 
-                paths.output      + "global.css",                 // Use the global.css
 
                 paths.css         + "home.css",
 

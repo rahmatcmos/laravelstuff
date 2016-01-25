@@ -10,7 +10,10 @@
         <!-- Web font -->
             <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet' type='text/css'>
 
+            <link rel="stylesheet" href="{{ elixir('output/global.css') }}"/>
             <link rel="stylesheet" href="{{ elixir('output/dashboard.css') }}"/>
+
+            <script src="{{elixir('output/global.js')}}"></script>
             <script src="{{elixir('output/dashboard.js')}}"></script>
 
             <link rel="shortcut icon" href={{ URL::asset("img/ico/favicon.ico") }}>

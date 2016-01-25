@@ -36,9 +36,6 @@
                 <div id = "ignitionColumnChart"  style="visibility: hidden"></div>
             </div>
         </div>
-       <div>
-            <canvas id="chart-ignitions-analytics" data-height="228px" class="width-full" width="752" height="228" style="height: 228px; width: 752px;"></canvas>
-        </div>
     </div>
 
     <div class="panel panel-inverse">
@@ -77,9 +74,6 @@
                 <div id = "speedColumnChart"  style="visibility: hidden"></div>
             </div>
         </div>
-       <div>
-            <canvas id="chart-speed-analytics" data-height="228px" class="width-full" width="752" height="228" style="height: 228px; width: 752px;"></canvas>
-        </div>
     </div>
 
     <div class="panel panel-inverse">
@@ -117,9 +111,6 @@
                 <div id = "connectionLineChart"  style="visibility: hidden"></div>
                 <div id = "connectionColumnChart"  style="visibility: hidden"></div>
             </div>
-        </div>
-       <div>
-            <canvas id="chart-connection-analytics" data-height="228px" class="width-full" width="752" height="228" style="height: 228px; width: 752px;"></canvas>
         </div>
     </div>
 </section>

@@ -1,7 +1,6 @@
 var styling     = require('./modules/form-styling-methods')
 var scroll      = require('./modules/scroll')
-var prettyphoto = require('./modules/prettyphoto.js')
-var charts      = require('./modules/chartmaker.js')
+var charts      = require('./modules/chartmaker')
 
 $(function () { // on document.ready()
     /******************************************* Start Dashboard Scripts ********************************************/
@@ -15,8 +14,7 @@ $(function () { // on document.ready()
         scroll.init();
         scroll.navigationScroll();
         scroll.smoothScrolling();
-        prettyphoto.prettyPhoto();
-        charts.initCharts();
+        charts.init();
    }
 
     /******************************************* End Dashboard Scripts **********************************************/
