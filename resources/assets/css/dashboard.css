@@ -520,11 +520,11 @@ h6 {
 }
 
 .panel-option .btn {
-    margin-top: -6px
+    margin-top: -6px;
 }
 
 .panel-body .panel-option {
-    margin: -20px -20px 20px
+    margin: -20px -20px 20px;
 }
 
 .panel.panel-danger .panel-heading .panel-title,
@@ -827,9 +827,71 @@ h6 {
 
 #upload-form label {
     font-weight: bold;
-    padding: 7px;
+    font-size
+    padding: 0 0 7px 0;
+    color: #000;
+}
+
+#upload-form label:nth-child(1) {
     color: #fff;
+    padding: 7px;
 }
 
 
+/* Feeds */
+
+.feeds>li {
+    background: #ebeced;
+    position: relative
+}
+
+.feeds {
+    list-style-type: none;
+    margin: 0;
+    padding: 0
+}
+
+.feeds>li {
+    line-height: 30px;
+    padding: 5px;
+    border-radius: 4px;
+    overflow: hidden
+}
+
+.feeds>li+li {
+    margin-top: 5px
+}
+
+.feeds>li>a {
+    display: block;
+    text-decoration: none
+}
+
+.feeds>li .icon {
+    float: left;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    color: #000;
+    color: rgba(0, 0, 0, .6);
+    line-height: 40px;
+    font-size: 18px;
+    margin: -5px 0 -5px -5px
+}
+
+.feeds>li .desc {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 10px;
+    white-space: nowrap;
+    color: #272C31
+}
+
+.feeds>li .time {
+    float: right;
+    padding: 0 10px;
+    font-style: italic;
+    color: #aab3ba;
+    font-size: 12px
+}
 

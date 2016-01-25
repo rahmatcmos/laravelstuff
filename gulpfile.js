@@ -83,6 +83,7 @@ elixir(function (mix) {
                 paths.output      + "global.js",
                 paths.jsaddins    + "bootstrap-filestyle.js",
                 paths.bootstrap   + "javascripts/bootstrap.js", // Needed extra load here because of bug with dropdown
+                paths.jsaddins    + "jquery.slimscroll.js",
 
                 paths.output      + "dashboard_bundle.js",
 

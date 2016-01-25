@@ -112,6 +112,15 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
 
 
     /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function csvs()
+    {
+        return $this->belongsToMany(Csv::class);
+    }
+
+
+    /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
     public function roles()
@@ -159,6 +168,18 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
         }
 
         $this->roles()->save($role);
+    }
+
+    /**
+     * @param Csv $csv
+     */
+    public function assignCsv(Csv $csv)
+    {
+        if ($csv == null) {
+            throw new ModelNotFoundException;
+        }
+
+        $this->csvs()->save($csv);
     }
 }
 

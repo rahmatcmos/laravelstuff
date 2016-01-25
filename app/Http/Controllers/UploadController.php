@@ -7,6 +7,9 @@ use App\Exceptions\FileNotSupportedError;
 use App\Exceptions\EmptyFileError;
 use App\Http\Requests\UploadRequest;
 use App\Validators\FileValidator;
+use App\Csv;
+use App\User;
+
 use Input;
 use Validator;
 use Request;
@@ -50,12 +53,19 @@ class UploadController extends Controller
     {
         if ($file !== null) {
             try {
+                $csv = new Csv();
+                $user = \Auth::user();
                 FileValidator::FILE_TYPE($file, 'csv');
                 $old_path = getcwd();
                 $destinationPath = '../CityGisProcess/bin/uploads'; // upload path
                 $extension = $file->getClientOriginalExtension(); // get the file extension
+                $size = $file->getClientSize();
                 $file->getClientOriginalName();
                 $file->move($destinationPath, $file->getClientOriginalName()); // Upload file to given path
+
+                // $csv->size($size);
+                // $csv->assignTo($user);
+                // $user->assignCsv($csv);
 
                 // sending back with message
                 alert()->success('Upload succesvol!')->autoclose(2500);

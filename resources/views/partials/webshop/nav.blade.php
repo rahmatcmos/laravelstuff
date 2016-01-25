@@ -12,7 +12,7 @@
 
             <!-- logo -->
             <div class="navbar-brand">
-                <a class="smooth-scroll site-name" data-section="#about" href="{{ (isset($page)) ? $page === 'Home' ? "#home" : "/" : false }} ">Citygis</a>
+                <a class="site-name" href="{{ (isset($page)) ? $page === 'Home' ? "#home" : "/" : false }}">Citygis</a>
             </div>
             <!-- /logo -->
         </div>

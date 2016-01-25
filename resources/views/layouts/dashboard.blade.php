@@ -51,8 +51,14 @@ $(".left-sidebar-toggled").click(function(e) {
     e.preventDefault();
     $("#wrapper").toggleClass("toggled");
 });
+$('.feeds').slimScroll({
+    color: '#000',
+    height: '303px',
+    size: '7px',
+    railOpacity: '0.4',
+    alwaysVisible: true
+});
 </script>
 
-<script src="{{elixir('output/global.js')}}"></script>
  </body>
 </html>

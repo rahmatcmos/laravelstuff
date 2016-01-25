@@ -1,3 +1,0 @@
-exports.smoothScrolling = function () {
-    $('.main-menu ul li .apply-smooth-scroll,.smooth-scroll').scrollingTo();
-}

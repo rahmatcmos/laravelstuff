@@ -109,7 +109,7 @@ class CreateRolesTable extends Migration
             ]);
         }
 
-        // Se user permissions
+        // Set user permissions
         DB::table('permission_role')->insert([
             'permission_id' => 2,
             'role_id' => 2

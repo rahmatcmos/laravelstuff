@@ -1,6 +1,6 @@
 var homepage = require('./modules/homepage')
 var styling = require('./modules/form-styling-methods')
-var smoothscroll = require('./modules/smoothscroll')
+var scroll = require('./modules/scroll')
 var prettyphoto = require('./modules/prettyphoto.js')
 
 $(function () { // on document.ready()
@@ -17,9 +17,9 @@ $(function () { // on document.ready()
         homepage.initTooltipsterContactForm(); // !! MUST CALLED BEFORE validateRegistrationForm !!
         homepage.validateContactForm();// Validate with the jquery validator plugin
         homepage.portfolioFilter();
-        smoothscroll.init();
-        smoothscroll.navigationScroll();
-        smoothscroll.smoothScrolling();
+        scroll.init();
+        scroll.navigationScroll();
+        scroll.smoothScrolling();
         prettyphoto.prettyPhoto();
     }
 

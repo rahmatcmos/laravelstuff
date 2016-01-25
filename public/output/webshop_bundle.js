@@ -1,9 +1,8 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 'use strict';
 
-var webshop = require('./modules/webshop');
 var styling = require('./modules/form-styling-methods');
-var smoothscroll = require('./modules/smoothscroll');
+var scroll = require('./modules/scroll');
 var prettyphoto = require('./modules/prettyphoto.js');
 
 $(function () {
@@ -16,17 +15,16 @@ $(function () {
     styling.changeAutoCompleteColorAllFields(); // Change the autocomplete color
 
     if (top.location.pathname === '/shop/nl/list') {
-        // webshop.setProductNumber(product);
-        smoothscroll.init();
-        smoothscroll.navigationScroll();
-        smoothscroll.smoothScrolling();
+        scroll.init();
+        scroll.navigationScroll();
+        scroll.smoothScrolling();
         prettyphoto.prettyPhoto();
     }
 
     /******************************************* End Webshop Scripts **********************************************/
 });
 
-},{"./modules/form-styling-methods":2,"./modules/prettyphoto.js":3,"./modules/smoothscroll":4,"./modules/webshop":5}],2:[function(require,module,exports){
+},{"./modules/form-styling-methods":2,"./modules/prettyphoto.js":3,"./modules/scroll":4}],2:[function(require,module,exports){
 /**
  * Change the autocomplete color for a single element
  * @param element
@@ -148,14 +146,5 @@ exports.init = function () {
     // SmoothScroll
     smoothScroll.init();
 };
-
-},{}],5:[function(require,module,exports){
-"use strict";
-
-// exports.setProductNumber = function(product) {
-//     var txt=document.getElementById("subject").value;
-//     txt=txt + product + "; ";
-//     document.getElementById("subject").value=txt;
-// }
 
 },{}]},{},[1]);

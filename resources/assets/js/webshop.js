@@ -1,6 +1,5 @@
-var webshop = require('./modules/webshop')
 var styling = require('./modules/form-styling-methods')
-var smoothscroll = require('./modules/smoothscroll')
+var scroll = require('./modules/scroll')
 var prettyphoto = require('./modules/prettyphoto.js')
 
 $(function () { // on document.ready()
@@ -12,10 +11,9 @@ $(function () { // on document.ready()
     styling.changeAutoCompleteColorAllFields(); // Change the autocomplete color
 
     if (top.location.pathname === '/shop/nl/list') {
-        // webshop.setProductNumber(product);
-        smoothscroll.init();
-        smoothscroll.navigationScroll();
-        smoothscroll.smoothScrolling();
+        scroll.init();
+        scroll.navigationScroll();
+        scroll.smoothScrolling();
         prettyphoto.prettyPhoto();
    }
 

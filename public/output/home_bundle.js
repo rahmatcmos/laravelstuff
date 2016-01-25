@@ -3,7 +3,7 @@
 
 var homepage = require('./modules/homepage');
 var styling = require('./modules/form-styling-methods');
-var smoothscroll = require('./modules/smoothscroll');
+var scroll = require('./modules/scroll');
 var prettyphoto = require('./modules/prettyphoto.js');
 
 $(function () {
@@ -20,16 +20,16 @@ $(function () {
         homepage.initTooltipsterContactForm(); // !! MUST CALLED BEFORE validateRegistrationForm !!
         homepage.validateContactForm(); // Validate with the jquery validator plugin
         homepage.portfolioFilter();
-        smoothscroll.init();
-        smoothscroll.navigationScroll();
-        smoothscroll.smoothScrolling();
+        scroll.init();
+        scroll.navigationScroll();
+        scroll.smoothScrolling();
         prettyphoto.prettyPhoto();
     }
 
     /******************************************* End Homepage Scripts **************************************************/
 });
 
-},{"./modules/form-styling-methods":2,"./modules/homepage":3,"./modules/prettyphoto.js":4,"./modules/smoothscroll":5}],2:[function(require,module,exports){
+},{"./modules/form-styling-methods":2,"./modules/homepage":3,"./modules/prettyphoto.js":4,"./modules/scroll":5}],2:[function(require,module,exports){
 /**
  * Change the autocomplete color for a single element
  * @param element
@@ -89,7 +89,7 @@ exports.tooltipsterConfig = function (id, theme, position) {
 'use strict';
 
 var styling = require('./form-styling-methods');
-var smoothscroll = require('./smoothscroll');
+var scroll = require('./scroll');
 var prettyphoto = require('./prettyphoto');
 
 /**
@@ -136,50 +136,6 @@ exports.validateContactForm = function () {
             }
         }
     });
-};
-
-// Navigation Scroll
-exports.navigationScroll = function () {
-    (function ($) {
-        $.fn.scrollingTo = function (opts) {
-            var defaults = {
-                animationTime: 1000,
-                easing: '',
-                callbackBeforeTransition: function callbackBeforeTransition() {},
-                callbackAfterTransition: function callbackAfterTransition() {}
-            };
-
-            var config = $.extend({}, defaults, opts);
-
-            $(this).click(function (e) {
-                var eventVal = e;
-                e.preventDefault();
-
-                var $section = $(document).find($(this).data('section'));
-                if ($section.length < 1) {
-                    return false;
-                }
-
-                if ($('html, body').is(':animated')) {
-                    $('html, body').stop(true, true);
-                }
-
-                var scrollPos = $section.offset().top;
-
-                if ($(window).scrollTop() == scrollPos) {
-                    return false;
-                }
-
-                config.callbackBeforeTransition(eventVal, $section);
-
-                $('html, body').animate({
-                    'scrollTop': scrollPos + 'px'
-                }, config.animationTime, config.easing, function () {
-                    config.callbackAfterTransition(eventVal, $section);
-                });
-            });
-        };
-    })(jQuery);
 };
 
 exports.initTooltipsterContactForm = function (ids) {
@@ -315,7 +271,7 @@ var clearFields = function clearFields() {
 
 /******************************************* End Homepage Functions ********************************************/
 
-},{"./form-styling-methods":2,"./prettyphoto":4,"./smoothscroll":5}],4:[function(require,module,exports){
+},{"./form-styling-methods":2,"./prettyphoto":4,"./scroll":5}],4:[function(require,module,exports){
 // Pretty Photo
 "use strict";
 

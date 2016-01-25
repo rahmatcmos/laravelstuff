@@ -2,7 +2,7 @@
 'use strict';
 
 var styling = require('./modules/form-styling-methods');
-var smoothscroll = require('./modules/smoothscroll');
+var scroll = require('./modules/scroll');
 var prettyphoto = require('./modules/prettyphoto.js');
 
 $(function () {
@@ -14,17 +14,17 @@ $(function () {
      */
     styling.changeAutoCompleteColorAllFields(); // Change the autocomplete color
 
-    if (top.location.pathname === '/shop/nl/list') {
-        smoothscroll.init();
-        smoothscroll.navigationScroll();
-        smoothscroll.smoothScrolling();
+    if (top.location.pathname === '/dashboard') {
+        scroll.init();
+        scroll.navigationScroll();
+        scroll.smoothScrolling();
         prettyphoto.prettyPhoto();
     }
 
     /******************************************* End Dashboard Scripts **********************************************/
 });
 
-},{"./modules/form-styling-methods":2,"./modules/prettyphoto.js":3,"./modules/smoothscroll":4}],2:[function(require,module,exports){
+},{"./modules/form-styling-methods":2,"./modules/prettyphoto.js":3,"./modules/scroll":4}],2:[function(require,module,exports){
 /**
  * Change the autocomplete color for a single element
  * @param element
