@@ -30,7 +30,7 @@
             <div class="text-ellipsis">{{\Carbon\Carbon::today()->format('d-m-Y')}}</div>
         </div>
         <div>
-                <div id = "ignitionLineChart"  style="visibility: hidden">
+                <div id = "ignitionLineChart"  style="visibility: hidden" >
 
                 </div>
                 <div id = "ignitionColumnChart"  style="visibility: hidden">

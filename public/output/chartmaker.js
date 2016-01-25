@@ -10,6 +10,12 @@ var holdIgnitionChartSortable = 'none';
 var holdConnectionChartSortable = 'none';
 var holdSpeedChartSortable = 'none';
 
+var ignitionLineResult;
+var ignitionColumnResult;
+var connectionLineResult;
+var connectionColumnResult;
+var speedLineResult;
+var speedColumnResult;
 /*
 * THESE FUNCTIONS ARE USED TO AJAX CALL THE DATA FOR EACH CHART
  */
@@ -38,8 +44,10 @@ $(function() {
                 }
                 else{
                     lava.loadData('ignitionLineChart', result, function (chart) {
+                        ignitionLineResult = result;
                     });
                     lava.loadData('ignitionColumnChart', result, function (chart) {
+                        ignitionColumnResult = result;
                     });
                 }
 
@@ -80,18 +88,21 @@ $(function() {
         if(holdIgnitionChartSortable == 'linechartIgnition')
         {
             $('#ignitionLineChart').css('visibility', 'visible');
-            $('#ignitionLineChart').css('display', 'inherit');
             $('#ignitionColumnChart').css('visibility', 'hidden');
+            $('#ignitionLineChart').css('display', 'inherit');
             $('#ignitionColumnChart').css('display', 'none');
+            lava.loadData('ignitionLineChart', ignitionLineResult, function (chart) {
+            });
         }
 
         if(holdIgnitionChartSortable == 'columnchartIgnition')
         {
-            $('#ignitionColumnChart').css('visibility', 'visible');
-            $('#ignitionColumnChart').css('display', 'inherit');
             $('#ignitionLineChart').css('visibility', 'hidden');
+            $('#ignitionColumnChart').css('visibility', 'visible');
             $('#ignitionLineChart').css('display', 'none');
-
+            $('#ignitionColumnChart').css('display', 'inherit');
+            lava.loadData('ignitionColumnChart', ignitionColumnResult, function (chart) {
+            });
         }
     })
 });
@@ -122,8 +133,11 @@ $(function() {
                 }
                 else{
                     lava.loadData('connectionLineChart', result, function (chart) {
+                        connectionLineResult = result;
                     });
+
                     lava.loadData('connectionColumnChart', result, function (chart) {
+                        connectionColumnResult = result;
                     });
                 }
 
@@ -162,8 +176,10 @@ $(function() {
                 }
                 else{
                     lava.loadData('speedLineChart', result, function (chart) {
+                        speedLineResult = result;
                     });
                     lava.loadData('speedColumnChart', result, function (chart) {
+                        speedColumnResult = result;
                     });
                 }
 
@@ -182,21 +198,24 @@ $(function() {
     $("#connectionChartSortable li").not('.emptyMessage').click(function() {
         holdConnectionChartSortable = this.id
 
-        if(holdConnectionChartSortable == 'linechartConnection')
+        if(holdConnectionChartSortable == 'connectionConnection')
         {
             $('#connectionLineChart').css('visibility', 'visible');
-            $('#connectionLineChart').css('display', 'inline-block');
             $('#connectionColumnChart').css('visibility', 'hidden');
+            $('#connectionLineChart').css('display', 'inherit');
             $('#connectionColumnChart').css('display', 'none');
+            lava.loadData('connectionLineChart', connectionLineResult, function (chart) {
+            });
         }
 
         if(holdConnectionChartSortable == 'columnchartConnection')
         {
-            $('#connectionColumnChart').css('visibility', 'visible');
-            $('#connectionColumnChart').css('display', 'inline-block');
             $('#connectionLineChart').css('visibility', 'hidden');
+            $('#connectionColumnChart').css('visibility', 'visible');
             $('#connectionLineChart').css('display', 'none');
-
+            $('#connectionColumnChart').css('display', 'inherit');
+            lava.loadData('connectionColumnChart', connectionColumnResult, function (chart) {
+            });
         }
     })
 });
@@ -228,7 +247,7 @@ $(function() {
     $('#connectionButton').click(function () {
         unitIdholderConnection = [];
         alert(unitIdholderConnection);
-        $('#conectionLineChart').css('visibility', 'hidden');
+        $('#connectionLineChart').css('visibility', 'hidden');
         $('#connectionLineChart').css('display' ,'none');
         $('#connectionColumnChart').css('display', 'none');
         $('#connectionColumnChart').css('visibility', 'hidden');
