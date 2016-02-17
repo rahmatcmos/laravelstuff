@@ -20,7 +20,7 @@ class UserTest extends TestCase
     public function testError()
     {
         $respons = $this->call('GET', '/about/');
-        $this->assertEquals(404, $response->status());
+        $this->assertEquals(200, $response->status());
     }
 
     /** @test */
